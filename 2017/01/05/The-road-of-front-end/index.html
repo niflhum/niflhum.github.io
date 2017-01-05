@@ -1,51 +1,15 @@
-extends base
-
-block title
-  title= page.title + ' | ' + config.title
-
-block content
-  .post
-    h1.post-title= page.title
-    .post-meta= page.date.format('ll')
-      if page.categories.length > 0
-        span= ' | '
-        span.category
-          for category in page.categories.toArray()
-            a(href=url_for(category.path))= category.name
-      if theme.busuanzi == true
-        script(src='https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js', async)
-        span#busuanzi_container_page_pv= ' | '
-          span#busuanzi_value_page_pv
-          span= ' ' + __('Hits')
-    if theme.duoshuo
-      a.ds-thread-count(data-thread-key=page.path, href=url_for(page.path) + '#comments')
-    if theme.disqus
-      a.disqus-comment-count(data-disqus-identifier=page.path, href=url_for(page.path) + '#disqus_thread')
-    if page.toc
-      div(class='clear')
-        div(id='toc' class='toc-article')
-          div(class='toc-title')= __('contents')
-          != toc(page.content)
-    .post-content
-      != page.content
-    if theme.shareto == true
-      script(type='text/javascript', src=url_for(theme.js) + '/share.js' + '?v=' + theme.version, async)
-      a.article-share-link(data-url='#{page.permalink}', data-id='#{page._id}')= __('shareto')
-    include _partial/tag
-    include _partial/post_nav
-    if theme.duoshuo
-      div(class='ds-share flat' data-thread-key=page.path, data-title=page.title, data-url=page.permalink)
-         .ds-share-inline
-            ul.ds-share-icons-16
-              li(data-toggle='ds-share-icons-more')
-                a(class='ds-more' href='javascript:void(0);') 分享到：
-              li
-                a(class='ds-weibo' href='javascript:void(0);' data-service='weibo') 微博
-              li
-                a(class='ds-qzone' href='javascript:void(0);' data-service='qzone') QQ空间
-              li
-                a(class='ds-qqt' href='javascript:void(0);' data-service='qqt') 腾讯微博
-              li
-                a(class='ds-wechat' href='javascript:void(0);' data-service='wechat') 微信
-            .ds-share-icons-more
-    include _partial/comments
+<!DOCTYPE html><html lang="zh-CN"><head><meta http-equiv="content-type" content="text/html; charset=utf-8"><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport"><meta content="yes" name="apple-mobile-web-app-capable"><meta content="black-translucent" name="apple-mobile-web-app-status-bar-style"><meta content="telephone=no" name="format-detection"><meta name="description" content="Job seekers"><title>The road of front-end  | -梁睿-</title><link rel="stylesheet" type="text/css" href="//cdn.bootcss.com/normalize/5.0.0/normalize.min.css"><link rel="stylesheet" type="text/css" href="//cdn.bootcss.com/pure/0.6.0/pure-min.css"><link rel="stylesheet" type="text/css" href="//cdn.bootcss.com/pure/0.6.0/grids-responsive-min.css"><link rel="stylesheet" type="text/css" href="/css/style.css?v=0.0.0"><link rel="stylesheet" href="//cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css"><script type="text/javascript" src="//cdn.bootcss.com/jquery/3.1.1/jquery.min.js"></script><link rel="Shortcut Icon" type="image/x-icon" href="/favicon.ico"><link rel="apple-touch-icon" href="/apple-touch-icon.png"><link rel="apple-touch-icon-precomposed" href="/apple-touch-icon.png"></head><body><div class="body_container"><div id="header"><div class="site-name"><h1 class="hidden">The road of front-end </h1><a id="logo" href="/.">-梁睿-</a><p class="description">-Job seekers-</p></div><div id="nav-menu"><a href="/." class="current"><i class="fa fa-home"> 首页</i></a><a href="/archives/"><i class="fa fa-archive"> 归档</i></a><a href="/about/"><i class="fa fa-user"> 关于</i></a><a href="/atom.xml"><i class="fa fa-rss"> 订阅</i></a></div></div><div id="layout" class="pure-g"><div class="pure-u-1 pure-u-md-3-4"><div class="content_container"><div class="post"><h1 class="post-title">The road of front-end </h1><div class="post-meta">Jan 5, 2017<span> | </span><span class="category"><a href="/categories/前端学习/">前端学习</a></span><script src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js" async></script><span id="busuanzi_container_page_pv"> | <span id="busuanzi_value_page_pv"></span><span> Hits</span></span></div><div class="post-content"><ol>
+<li>做一个个人网站，或者团队或者小组做一些介绍页面。 怎么做？搜索发现要学习：HTML、CSS。</li>
+<li>发现一个网站设计的好漂亮，交互真赞，动画效果真好。我想在我自己网站上也放上，可是我看不懂它的代码？搜索发现要学习：交互视觉、CSS3 动画等。</li>
+<li>他们网站上都有那种点击弹出浮层的功能，还有一些其他的更复杂的交互效果。怎么实现的？学习 JavaScript。</li>
+<li>有小学同学说我的个人网站错位了，问了下他用的是 IE7 访问的，怎么办？搜索了解一些浏览器兼容性问题、学习使用 jQuery。</li>
+<li>我想在微信朋友圈分享一下我的网站，结果缩放的好小，而且有错位。怎么解决这个问题？搜索发现要学习 响应式相关。</li>
+<li>分享了之后，发现打开速度好慢啊，要等十几秒才能打开。怎么办？学一下前端性能优化相关。</li>
+<li>网站交互功能和效果越来越多，写的 JS 和 CSS 代码越来越多，感觉写起来好慢，出了 bug 很难定位问题。怎么办？搜索发现要学习：Emmet、Less、SCSS 等辅助工具用法，JS 模块化 require.js、sea.js 以及对应的 AMD、CMD 以及 CommonJS 模块化规范等。</li>
+<li>JS 更复杂了，而且要与其他同学合作开发。发现需要学习一些前端框架来提高开发效率，比如 React、Angular、Vue，此外还需要一些打包构建工具，将 JS 编译之后发布使用。需要学习 Webpack、Grunt、Gulp 等工具用法。</li>
+<li>网页和应用是开发好了，可是是静态的，没法有数据更新，怎么办？学习前后端数据沟通，Ajax 请求、JSON 数据格式、Fetch API。当然由此延伸，最好还要了解 PHP、Java Velocity、Nodejs 这些后端的知识，还要对 HTTP 的一些状态码、请求类型等有所了解。</li>
+<li>应用部署到哪里？搜索了解：虚拟主机、域名注册、VPS、云主机、Paas、Laas、DNS 解析、在中国做网站要备案但是服务器放在国外就不需要等等。</li>
+<li>每次新创建应用，在我的服务器上都要配置一遍 PHP 环境、Nodejs 环境，有的应用对 PHP 版本要求还不同，怎么办？搜索了解虚拟化技术，Docker 帮你极好的解决这个问题。</li>
+<li>每次发布还要自己手动上传代码到服务器，而且要自己在本地打包、运行单元测试，好麻烦啊。搜索发现可以自己搭建一套持续集成系统，用 git push 代码，自动触发构建，运行单元测试，成功后自动 build 然后给你上传到服务器上面。你只需要写代码就可以了。推荐：gogs + drone + docker。</li>
+</ol>
+</div><script type="text/javascript" src="/js/share.js?v=0.0.0" async></script><a data-url="http://www.niflhum.win/2017/01/05/The-road-of-front-end/" data-id="cixkfylxw0001wov81ghebg37" class="article-share-link">分享到</a><div class="tags"><a href="/tags/front-end/">front-end</a></div><div class="post-nav"><a href="/2017/01/05/My-New-Post/" class="next">My New Post</a></div></div></div></div><div class="pure-u-1-4 hidden_mid_and_down"><div id="sidebar"><div class="widget"><form action="//www.google.com/search" method="get" accept-charset="utf-8" target="_blank" class="search-form"><input type="text" name="q" maxlength="20" placeholder="Search"/><input type="hidden" name="sitesearch" value="http://www.niflhum.win"/></form></div><div class="widget"><div class="widget-title"><i class="fa fa-folder-o"> 分类</i></div><ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/前端学习/">前端学习</a></li></ul></div><div class="widget"><div class="widget-title"><i class="fa fa-star-o"> 标签</i></div><div class="tagcloud"><a href="/tags/front-end/" style="font-size: 15px;">front-end</a></div></div><div class="widget"><div class="widget-title"><i class="fa fa-file-o"> 最新文章</i></div><ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/2017/01/05/The-road-of-front-end/">The road of front-end </a></li><li class="post-list-item"><a class="post-list-link" href="/2017/01/05/My-New-Post/">My New Post</a></li></ul></div><div class="widget"><div class="widget-title"><i class="fa fa-external-link"> 友情链接</i></div><ul></ul><a href="http://www.example1.com/" title="site-name1" target="_blank">site-name1</a><ul></ul><a href="http://www.example2.com/" title="site-name2" target="_blank">site-name2</a><ul></ul><a href="http://www.example3.com/" title="site-name3" target="_blank">site-name3</a></div></div></div><div class="pure-u-1 pure-u-md-3-4"><div id="footer">© <a href="/." rel="nofollow">-梁睿-.</a> Powered by<a rel="nofollow" target="_blank" href="https://hexo.io"> Hexo.</a><a rel="nofollow" target="_blank" href="https://github.com/tufu9441/maupassant-hexo"> Theme</a> by<a rel="nofollow" target="_blank" href="https://github.com/pagecho"> Cho.</a></div></div></div><a id="rocket" href="#top" class="show"></a><script type="text/javascript" src="/js/totop.js?v=0.0.0" async></script><script type="text/javascript" src="//cdn.bootcss.com/fancybox/2.1.5/jquery.fancybox.pack.js" async></script><script type="text/javascript" src="/js/fancybox.js?v=0.0.0" async></script><link rel="stylesheet" type="text/css" href="/css/jquery.fancybox.css?v=0.0.0"><script type="text/javascript" src="/js/codeblock-resizer.js?v=0.0.0"></script><script type="text/javascript" src="/js/smartresize.js?v=0.0.0"></script></div></body></html>
