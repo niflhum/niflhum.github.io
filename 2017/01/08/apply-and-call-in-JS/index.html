@@ -141,8 +141,7 @@ var _hmt = _hmt || [];
 <p>2.什么情况下用apply,什么情况下用call</p>
 <p>3.apply的其他巧妙用法（一般在什么情况下可以使用apply）</p>
 <p>我首先从网上查到关于apply和call的定义,然后用示例来解释这两个方法的意思和如何去用.</p>
-<p>apply:方法能劫持另外一个对象的方法，继承另外一个对象的属性.</p>
-<p>Function.apply(obj,args)方法能接收两个参数<br>obj：这个对象将代替Function类里this对象<br>args：这个是数组，它将作为参数传给Function（args–&gt;arguments）</p>
+<p>apply:方法能劫持另外一个对象的方法，继承另外一个对象的属性.<br><a id="more"></a><br>Function.apply(obj,args)方法能接收两个参数<br>obj：这个对象将代替Function类里this对象<br>args：这个是数组，它将作为参数传给Function（args–&gt;arguments）</p>
 <p>call:和apply的意思一样,只不过是参数列表不一样.</p>
 <p>Function.call(obj,[param1[,param2[,…[,paramN]]]])<br>obj：这个对象将代替Function类里this对象<br>params：这个是一个参数列表</p>
 <p>1.apply示例:</p>
@@ -151,7 +150,7 @@ var _hmt = _hmt || [];
 function Person(name,age) { 
 this.name=name; this.age=age; 
 } 
-<a id="more"></a>
+
 /*定义一个学生类*/ 
 functionStudent(name,age,grade) { 
 Person.apply(this,arguments); this.grade=grade; 
