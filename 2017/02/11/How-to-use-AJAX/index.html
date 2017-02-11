@@ -6,7 +6,7 @@
   <meta http-equiv="cache-control" content="no-cache">
   <meta http-equiv="expires" content="0">
   
-  <title>英语学习 | -梁睿-</title>
+  <title>How to use AJAX | -梁睿-</title>
   <meta name="author" content="niflhum">
   
   <meta name="description" content="Job seekers">
@@ -14,7 +14,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
-  
+  <meta property="og:title" content="How to use AJAX"/>
   <meta property="og:site_name" content="-梁睿-"/>
 
   
@@ -96,135 +96,112 @@
   	<div class="content">
     	 
 
-<!-- title -->
-<div class="page-header">
-  <h1 class="archive-title-category"><i class="fa fa-archive"></i> 英语学习</h1>
-</div>
 
-<div class="row page">
-  <!-- cols -->
-  
-  <div class="col-md-9">
 	
-
-	  <div id="top_search"></div>
-
-	  <div class="archive">
-		
-		
-		
-			
-			
-			<h4 class="archive-ul" data-toggle="collapse" data-target="#2017">2017<b class="caret"></b></h4>
-			<ul id="2017" class="collapse in">
-			
-		
-		<li class="listing-item">
-		<span class="date_class"> 2017-01-09 </span> &raquo;
-		
-		   <span class="title"><a href="/2017/01/09/English-frequently-employed-sentences/" >English:frequently employed sentences</a></span>
-		
-		</li>			
-		
-		</ul>
+		<div class="page-header">
+			<h1> How to use AJAX</h1>
 		</div>
-
-</div> <!-- col-md-9/col-md-12 -->
-
-
-<div class="col-md-3">
-	<div id="sidebar">
 	
-			
-  <div id="site_search">
-   <div class="form-group">
-    <input type="text" id="local-search-input" name="q" results="0" placeholder="搜索" class="st-search-input st-default-search-input form-control"/>
-   </div>  
-  <div id="local-search-result"></div>
-  </div>
 
 
-		
-			
-	<div class="widget">
-		<h4>分类</h4>
-		<ul class="tag_box inline list-unstyled">
-		
-			<li><a href="/categories/前端学习/">前端学习<span>5</span></a></li>
-		
-			<li><a href="/categories/英语学习/">英语学习<span>1</span></a></li>
-		
-		</ul>
+
+<div class="row post">
+	<!-- cols -->
+	
+	<div id="top_meta"></div>
+	<div class="col-md-9">
+	
+
+	<!-- content -->
+	<div class="mypage">		
+	  		
+
+	  <h1 id="简单介绍-JQuery实现AJAX的代码"><a href="#简单介绍-JQuery实现AJAX的代码" class="headerlink" title="简单介绍 JQuery实现AJAX的代码"></a>简单介绍 JQuery实现AJAX的代码</h1><p><code>$(document).ready(function(){</code><br><code>$(&quot;#search&quot;).click(function(){//绑定click事件</code><br><code>$.ajax({</code><br><code>type:&quot;GET&quot;,//请求方式</code><br><code>url:&quot;service.php?number=&quot;+$(&quot;#keyword&quot;).val(),//请求地址</code><br><code>dataType:&quot;json&quot;,//响应数据类型</code><br><code>success:function(data){//请求成功后执行的方法，参数1data是响应数据</code><br><code>if(success){</code><br><code>$(&quot;#searchresult&quot;).html(data.msg)</code><br><code>}else{</code><br><code>$(&quot;#searchresult&quot;).html(&quot;出现错误&quot;+data.msg)</code><br><code>},</code><br><code>}</code><br><code>error:function(jqXHR){//请求失败执行的方法,参数jqXHR是XHR的对象</code><br><code>alert(&quot;发生错误&quot;+jqXHR.status)</code></p>
+	  
 	</div>
 
-		
-			
-	<div class="widget">
-		<h4>标签云</h4>
-		<ul class="tag_box inline list-unstyled">		
-		
-			<li><a href="/tags/English/">English<span>1</span></a></li>
-		
-			<li><a href="/tags/front-end/">front-end<span>5</span></a></li>
-		
-		 
-		</ul>
+	<div>
+  	<center>
+	<div class="pagination">
+
+    
+    
+    <a type="button" class="btn btn-default disabled"><i class="fa fa-arrow-circle-o-left"></i>上一页</a>
+    
+
+    <a href="/" type="button" class="btn btn-default"><i class="fa fa-home"></i>Home</a>
+    
+    <a href="/2017/02/10/404-not-found/" type="button" class="btn btn-default ">下一页<i
+                class="fa fa-arrow-circle-o-right"></i></a>
+    
+
+    
+</div>
+
+    </center>
 	</div>
+	
+	<!-- comment -->
+	
+<section id="comment">
+    <h2 class="title">留言</h2>
+
+    
+</section>
 
 
+	</div> <!-- col-md-9/col-md-12 -->
 		
-			
-<div class="widget">
-  <h4>最新文章</h4>
-  <ul class="entry list-unstyled">
-    
-      <li>
-        <a href="/2017/02/11/How-to-use-AJAX/" ><i class="fa fa-file-o"></i>How to use AJAX</a>
-      </li>
-    
-      <li>
-        <a href="/2017/02/10/404-not-found/" ><i class="fa fa-file-o"></i>404 not found?</a>
-      </li>
-    
-      <li>
-        <a href="/2017/01/15/about-clearfix/" ><i class="fa fa-file-o"></i>about clearfix</a>
-      </li>
-    
-      <li>
-        <a href="/2017/01/09/English-frequently-employed-sentences/" ><i class="fa fa-file-o"></i>English:frequently employed...</a>
-      </li>
-    
-      <li>
-        <a href="/2017/01/08/apply-and-call-in-JS/" ><i class="fa fa-file-o"></i>apply() and call() in JS</a>
-      </li>
-    
-  </ul>
-</div>
+	
+	<div id="side_meta">
+		<div class="col-md-3" id="post_meta"> 
 
+	<!-- date -->
+	
+	<div class="meta-widget">
+	<i class="fa fa-clock-o"></i>
+	2017-02-11 
+	</div>
+	
+
+	<!-- categories -->
+    
+	<div class="meta-widget">
+	<a data-toggle="collapse" data-target="#categorys"><i class="fa fa-folder"></i></a>	
+    <ul id="categorys" class="tag_box list-unstyled collapse in">
+          
+  <li>
+    <li><a href="/categories/前端学习/">前端学习<span>5</span></a></li>
+  </li>
+
+    </ul>
+	</div>
+	
+
+	<!-- tags -->
+	
+	<div class="meta-widget">
+	<a data-toggle="collapse" data-target="#tags"><i class="fa fa-tags"></i></a>		  
+    <ul id="tags" class="tag_box list-unstyled collapse in">	  
+	    
+  <li><a href="/tags/front-end/">front-end<span>5</span></a></li>
+    </ul>
+	</div>
 		
-			
-<div class="widget">
-	<h4>链接</h4>
-	<ul class="blogroll list-unstyled">
-	
-		<li><i class="fa fa-github"></i><a href="https://github.com/niflhum" title="niflhum's Github repository." target="_blank"]);">My Github</a></li>
-	
-		<li><i class="fa fa-github"></i><a href="https://github.com/kristopolous/BOOTSTRA.386" title="BOOTSTRA.386's Github repository." target="_blank"]);">BOOTSTRA.386</a></li>
-	
-		<li><i class="fa fa-github"></i><a href="https://github.com/blackshow/hexo-theme-freemind.386" title="Freemind.386's Github repository." target="_blank"]);">Freemind.386</a></li>
-	
-		<li><i class="fa fa-github"></i><a href="http://learngit.niflhum.win/" title="Team page." target="_blank"]);">My Demo</a></li>
-	
-		<li><i class="fa fa-linkedin"></i><a href="http://www.linkedin.com/in/niflhum" title="My Linkin account." target="_blank"]);">My LinkedIn</a></li>
-	
-	</ul>
-</div>
 
+	<!-- toc -->
+	<div class="meta-widget">
+	
+	</div>
+	
+    <hr>
+	
+</div><!-- col-md-3 -->
 
+	</div>
 		
-	</div> <!-- sidebar -->
-</div> <!-- col-md-3 -->
 
+</div><!-- row -->
 
 
 
