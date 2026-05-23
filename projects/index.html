@@ -36,6 +36,18 @@
   .project .lang { font-size:0.7rem; color:var(--muted); white-space:nowrap; }
   .project a { color:inherit; text-decoration:none; }
   .project:hover { border-color:var(--accent); }
+  .section-title {
+    font-size:0.7rem; color:var(--muted); text-transform:uppercase;
+    letter-spacing:0.12em; margin:2rem 0 0.8rem; font-weight:500;
+  }
+  .gh-repo {
+    display:block; padding:0.6rem 0.8rem; border-bottom:1px solid var(--divider);
+    text-decoration:none; color:var(--text); font-size:0.82rem;
+    transition:all 0.2s;
+  }
+  .gh-repo:hover { background:var(--card); color:var(--heading); }
+  .gh-repo .name { color:var(--heading); font-weight:500; }
+  .gh-repo .desc { color:var(--muted); font-size:0.75rem; margin-top:0.15rem; }
   footer { margin-top:2.5rem; color:var(--muted); font-size:0.85rem; text-align:center; }
   footer a { color:var(--muted); }
 </style>
@@ -65,7 +77,26 @@
     <span class="lang">HTML/CSS</span>
   </div></a>
 
-  <footer><a href="https://github.com/niflhum">更多 →</a></footer>
+  <div class="section-title">更多仓库</div>
+  <div id="gh-dynamic"></div>
+
+  <footer><a href="https://github.com/niflhum">GitHub 全部仓库 →</a></footer>
 </div>
+<script>
+  const CURATED = ['machiavelli-library','machiavelli-skill','gwsw','niflhum.github.io'];
+  fetch('/garden/github-activity.json')
+    .then(r => r.json())
+    .then(data => {
+      if (!data.repos || !data.repos.length) return;
+      const others = data.repos.filter(r => !CURATED.includes(r.name));
+      if (!others.length) return;
+      document.getElementById('gh-dynamic').innerHTML = others.map(r =>
+        `<a href="${r.url}" class="gh-repo" target="_blank">
+          <span class="name">${r.name}</span>
+          <span style="color:var(--muted);font-size:0.7rem;"> · ${r.language||''} ${r.stars?'★'+r.stars:''}</span>
+          <div class="desc">${r.description||''}</div>
+        </a>`).join('');
+    }).catch(()=>{});
+</script>
 </body>
 </html>
