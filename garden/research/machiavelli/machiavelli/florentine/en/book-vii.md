@@ -1,6 +1,0 @@
-# BOOK VII
-
-BOOK VII
-
-
-

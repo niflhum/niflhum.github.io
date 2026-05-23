@@ -1,6 +1,0 @@
-# BOOK V
-
-BOOK V
-
-
-

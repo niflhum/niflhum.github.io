@@ -1,6 +1,0 @@
-# BOOK VI
-
-BOOK VI
-
-
-

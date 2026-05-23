@@ -1,6 +1,0 @@
-# BOOK VIII
-
-BOOK VIII
-
-
-
