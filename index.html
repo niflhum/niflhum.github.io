@@ -95,7 +95,17 @@
       .tagline { font-size: 1rem; }
       .quick-links { flex-direction: column; }
       .quick-link { text-align: center; }
+      .project-list { flex-direction: column; }
     }
+    .project-list { display:flex; flex-wrap:wrap; gap:0.8rem; margin-top:1.5rem; justify-content:center; }
+    .project-card { 
+      display:block; padding:0.6rem 1rem; background:var(--card-bg,#f8f8f8);
+      border-radius:8px; text-decoration:none; color:inherit; min-width:180px;
+    }
+    .project-card:hover { background:var(--card-hover,#eee); }
+    .project-card strong { display:block; font-size:0.95rem; }
+    .project-card span { display:block; font-size:0.8rem; color:#666; margin:0.2rem 0; }
+    .project-card small { font-size:0.75rem; color:#999; }
   </style>
 </head>
 <body>
@@ -126,7 +136,7 @@
       <a href="https://github.com/niflhum" class="quick-link">🐙 GitHub</a>
     </div>
 
-    <div id="dynamic-projects" style="margin-top:2rem; display:flex; flex-wrap:wrap; gap:0.8rem;"></div>
+    <div id="dynamic-projects" class="project-list"></div>
 
     <footer>
       <p>Things change, roll with it.</p>
