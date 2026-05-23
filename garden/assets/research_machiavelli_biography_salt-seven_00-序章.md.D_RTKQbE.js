@@ -1,0 +1,3 @@
+import{c as r,Q as l,j as t,g as e,n}from"./chunks/framework.hhGiamYR.js";const _=JSON.parse('{"title":"序章","description":"","frontmatter":{},"headers":[],"relativePath":"research/machiavelli/biography/salt-seven/00-序章.md","filePath":"research/machiavelli/biography/salt-seven/00-序章.md"}'),s={name:"research/machiavelli/biography/salt-seven/00-序章.md"};function o(c,a,i,p,d,h){return l(),t("div",null,[...a[0]||(a[0]=[e("h1",{id:"序章",tabindex:"-1"},[n("序章 "),e("a",{class:"header-anchor",href:"#序章","aria-label":'Permalink to "序章"'},"​")],-1),e("p",null,"序章",-1),e("pre",null,[e("code",null,`圣安德里亚山庄·五百年后
+`)],-1),e("p",null,"第一部",-1),e("pre",null,[e("code",null,`马基雅维利看到了什么
+`)],-1)])])}const u=r(s,[["render",o]]);export{_ as __pageData,u as default};
