@@ -1,313 +1,185 @@
 <!DOCTYPE HTML>
-<html>
+<html lang="zh-CN">
 <head>
   <meta charset="utf-8">
-  <meta http-equiv="pragma" content="no-cache">
-  <meta http-equiv="cache-control" content="no-cache">
-  <meta http-equiv="expires" content="0">
 
-  <title>-梁睿-</title>
+  <title>Niflhum</title>
   <meta name="author" content="niflhum">
-  <meta name="description" content="Job seekers">
+  <meta name="description" content="Niflhum 的个人网站 — 公务员 · 前前端开发者 · 马基雅维利研究者">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:site_name" content="-梁睿-"/>
-  <meta property="og:image" content="undefined"/>
+  <meta property="og:site_name" content="Niflhum"/>
+  <meta property="og:title" content="Niflhum"/>
+  <meta property="og:description" content="Niflhum 的个人网站 — 公务员 · 前前端开发者 · 马基雅维利研究者"/>
+  <meta property="og:type" content="website"/>
   <link href="/favicon.png" rel="icon">
-  <link rel="stylesheet" href="/css/bootstrap.min.css" media="screen" type="text/css">
-  <link rel="stylesheet" href="/css/font-awesome.css" media="screen" type="text/css">
-  <link rel="stylesheet" href="/css/style.css" media="screen" type="text/css">
-  <link rel="stylesheet" href="/css/responsive.css" media="screen" type="text/css">
-  <link rel="stylesheet" href="/css/highlight.css" media="screen" type="text/css">
-  <link rel="stylesheet" href="/css/google-fonts.css" media="screen" type="text/css">
-  <!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
-  <script src="/js/jquery-2.0.3.min.js"></script>
+  <style>
+    :root {
+      --bg: #1a1410; --card: #231e18; --text: #c4b99a;
+      --heading: #d9ceb5; --muted: #7a6e5d; --accent: #8b3a3a;
+      --accent-glow: #a84848; --border: #3a3028; --divider: #2a241c;
+    }
+    * { margin:0; padding:0; box-sizing:border-box; }
+    body {
+      font-family: -apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Microsoft YaHei",sans-serif;
+      background: var(--bg); color: var(--text);
+      min-height: 100vh; line-height: 1.75;
+    }
+    /* Navigation */
+    .top-nav {
+      background: rgba(26,20,16,0.95);
+      border-bottom: 1px solid var(--border);
+      position: sticky; top: 0; z-index: 100;
+      padding: 0.6rem 1rem;
+    }
+    .top-nav .inner {
+      max-width: 720px; margin: 0 auto;
+      display: flex; align-items: center; justify-content: space-between;
+      flex-wrap: wrap; gap: 0.4rem;
+    }
+    .top-nav .brand {
+      font-family: Georgia,"Noto Serif SC",serif;
+      font-size: 1.1rem; color: var(--heading); text-decoration: none;
+    }
+    .top-nav .brand:hover { color: var(--accent); }
+    .top-nav .links { display: flex; gap: 0.3rem; flex-wrap: wrap; }
+    .top-nav .links a {
+      color: var(--muted); text-decoration: none; font-size: 0.82rem;
+      padding: 0.25rem 0.6rem; border-radius: 2px; transition: all 0.2s;
+    }
+    .top-nav .links a:hover { color: var(--heading); background: var(--card); }
+    /* Content */
+    .container { max-width: 720px; margin: 0 auto; padding: 2rem 1rem 3rem; }
+    h1, h2, h3 {
+      font-family: Georgia,"Noto Serif SC","Songti SC",serif;
+      font-weight: 400; color: var(--heading);
+    }
+    h1 { font-size: 2rem; margin-bottom: 0.5rem; letter-spacing: -0.5px; }
+    h2 { font-size: 1.3rem; margin: 1.5rem 0 0.5rem; }
+    h3 { font-size: 1.05rem; margin: 1.2rem 0 0.3rem; color: var(--text); }
+    a { color: var(--accent); text-decoration: none; }
+    a:hover { color: var(--accent-glow); }
+    p { margin-bottom: 0.8rem; }
+    ul, ol { margin: 0.5rem 0 0.8rem 1.5rem; }
+    li { margin: 0.3rem 0; }
+    code {
+      background: var(--card); color: var(--text);
+      padding: 0.1rem 0.4rem; border-radius: 3px;
+      font-size: 0.9em;
+    }
+    pre {
+      background: var(--card); border: 1px solid var(--border);
+      padding: 1rem; overflow-x: auto; margin: 0.8rem 0;
+      border-radius: 3px;
+    }
+    pre code { background: none; padding: 0; }
+    blockquote {
+      border-left: 3px solid var(--accent);
+      background: rgba(139,58,58,0.08);
+      padding: 0.5rem 1rem; margin: 0.8rem 0;
+      color: #a89878; font-style: italic;
+    }
+    hr { border: none; border-top: 1px solid var(--divider); margin: 1.5rem 0; }
+    table { border-collapse: collapse; width: 100%; margin: 0.8rem 0; }
+    th, td { border: 1px solid var(--border); padding: 0.4rem 0.8rem; text-align: left; }
+    th { background: var(--card); color: var(--heading); font-weight: 500; }
+    /* Post meta */
+    .post-date { color: var(--muted); font-size: 0.82rem; margin-bottom: 1.5rem; }
+    .post-meta-section { margin-top: 2rem; padding-top: 1rem; border-top: 1px solid var(--divider); }
+    .post-meta-section h4 { color: var(--muted); font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 0.5rem; }
+    .tag-list { display: flex; flex-wrap: wrap; gap: 0.4rem; list-style: none; margin: 0; }
+    .tag-list li { margin: 0; }
+    .tag-list a {
+      display: inline-block; padding: 0.15rem 0.6rem;
+      background: var(--card); border: 1px solid var(--border);
+      color: var(--muted); font-size: 0.78rem; text-decoration: none;
+      transition: all 0.2s;
+    }
+    .tag-list a:hover { border-color: var(--accent); color: var(--heading); }
+    /* Archive / list pages */
+    .post-item {
+      padding: 1rem 0; border-bottom: 1px solid var(--divider);
+    }
+    .post-item h2 { font-size: 1rem; margin: 0 0 0.2rem; }
+    .post-item h2 a { color: var(--heading); text-decoration: none; }
+    .post-item h2 a:hover { color: var(--accent); }
+    .post-item .meta { font-size: 0.78rem; color: var(--muted); }
+    /* Footer */
+    footer {
+      text-align: center; padding: 2rem 1rem; color: var(--muted);
+      font-size: 0.8rem; border-top: 1px solid var(--divider);
+    }
+    footer p { margin-bottom: 0.3rem; }
+    /* Back link */
+    .back-link { margin-bottom: 1.5rem; }
+    .back-link a { color: var(--muted); text-decoration: none; font-size: 0.85rem; }
+    .back-link a:hover { color: var(--accent); }
+    /* Year heading */
+    .year-heading { font-size: 1.3rem; margin: 1.5rem 0 0.5rem; color: var(--accent); }
+    @media (max-width: 600px) {
+      .top-nav .inner { flex-direction: column; align-items: flex-start; }
+      h1 { font-size: 1.5rem; }
+    }
+  </style>
 <meta name="generator" content="Hexo 8.1.1"></head>
 
 <body>
-  <nav id="main-nav" class="navbar navbar-inverse navbar-fixed-top" role="navigation">
-    <div class="container">
-      <button type="button" class="navbar-header navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-        <span class="sr-only">Toggle navigation</span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-      </button>
-      <a class="navbar-brand" href="/">-梁睿-</a>
-      <div class="collapse navbar-collapse nav-menu">
-        <ul class="nav navbar-nav">
-          
-          <li>
-            <a href="/archives" title="Archives">
-              <i class=""></i>Archives
-            </a>
-          </li>
-          
-          <li>
-            <a href="/categories" title="Categories">
-              <i class=""></i>Categories
-            </a>
-          </li>
-          
-          <li>
-            <a href="/tags" title="Tags">
-              <i class=""></i>Tags
-            </a>
-          </li>
-          
-          <li>
-            <a target="_blank" rel="noopener" href="http://learngit.niflhum.win/" title="About">
-              <i class=""></i>About
-            </a>
-          </li>
-          
-          <li>
-            <a href="/atom.xml" title="RSS">
-              <i class=""></i>RSS
-            </a>
-          </li>
-          
-        </ul>
+  <nav class="top-nav">
+    <div class="inner">
+      <a class="brand" href="/">Niflhum</a>
+      <div class="links">
+        <a href="/">首页</a>
+        <a href="/posts/">文章</a>
+        <a href="/garden/">知识库</a>
+        <a href="/projects/">项目</a>
       </div>
     </div>
   </nav>
-  <div class="clearfix"></div>
 
   <div class="container">
-    <div class="content">
-      <div class="page-header logo">
-  <h1><span class="blink-fast">∎</span></h1>
-</div>
-
-<div class="row page">
-  <div class="col-md-9">
-    <div class="mypage">
-      
-      <div class="row">
-        <div class="col-md-8">
-          <h3 class="title">
-            <a href="/2017/02/11/2017-02-11-how-to-use-ajax/">How to use AJAX</a>
-          </h3>
-        </div>
-        <div class="col-md-4">
-          <div class="date">post @ 2017-02-11</div>
-        </div>
-      </div>
-      <div class="entry">
-        <div class="row">
-          简单介绍 JQuery实现AJAX的代码
-$(document).ready(function(){
-$(&quot;#search&quot;).click(function(){&#x2F;&#x2F;绑定click事件
-$.ajax({
-type:&quot;GET&quot;,&#x2F;&#x2F;请求方式
-url:&quot;service.php?number&#x3D;&qu...
-        </div>
-        <a type="button" href="/2017/02/11/2017-02-11-how-to-use-ajax/#more" class="btn btn-default more">阅读此文</a>
-      </div>
-      
-      <div class="row">
-        <div class="col-md-8">
-          <h3 class="title">
-            <a href="/2017/02/10/2017-02-10-404-not-found/">404 not found?</a>
-          </h3>
-        </div>
-        <div class="col-md-4">
-          <div class="date">post @ 2017-02-10</div>
-        </div>
-      </div>
-      <div class="entry">
-        <div class="row">
-          请求响应的状态码
-1xx：信息类，表示收到web浏览器请求，正在进一步的处理中
-2xx：成功，表示用户请求被正确接收，理解和处理。如200 OK
-3xx：重定向，表示请求没有成功，客户必须采取进一步的操作
-4xx：客户端错误，表示客户端提交的请求有错误，例如，404 not found，意味着请求中所引用的文档不存在
-5xx：服务器错误，表示服务器不能完成对请求的处理，如500
-牢记状态码对...
-        </div>
-        <a type="button" href="/2017/02/10/2017-02-10-404-not-found/#more" class="btn btn-default more">阅读此文</a>
-      </div>
-      
-      <div class="row">
-        <div class="col-md-8">
-          <h3 class="title">
-            <a href="/2017/01/15/2017-01-15-about-clearfix/">about clearfix</a>
-          </h3>
-        </div>
-        <div class="col-md-4">
-          <div class="date">post @ 2017-01-15</div>
-        </div>
-      </div>
-      <div class="entry">
-        <div class="row">
-          清除浮动在父级添加类别clearfix；
-.clearfix{zoom:1;&#x2F;&#x2F;兼容ie6,7}.clearfix:after{content:&quot;.&quot;;display: &quot;block&quot;;height: &quot;0&quot;;clear: both;visibility: hidden;}
-防止上下margin重叠导致浏览器顶部...
-        </div>
-        <a type="button" href="/2017/01/15/2017-01-15-about-clearfix/#more" class="btn btn-default more">阅读此文</a>
-      </div>
-      
-      <div class="row">
-        <div class="col-md-8">
-          <h3 class="title">
-            <a href="/2017/01/09/2017-01-09-englishfrequently-employed-sentences/">English:frequently employed sentences</a>
-          </h3>
-        </div>
-        <div class="col-md-4">
-          <div class="date">post @ 2017-01-09</div>
-        </div>
-      </div>
-      <div class="entry">
-        <div class="row">
-          After you． 您先。Allow me． 让我来。Any day will do． 哪一天都行Any messages for me? 有我的留言吗?Any thing else? 还要别的吗?Any urgent thing？ 有急事吗？Are you kidding? 你在开玩笑吧!Are you sure? 你肯定吗?As soon as possible! 越快越好!Be ca...
-        </div>
-        <a type="button" href="/2017/01/09/2017-01-09-englishfrequently-employed-sentences/#more" class="btn btn-default more">阅读此文</a>
-      </div>
-      
-      <div class="row">
-        <div class="col-md-8">
-          <h3 class="title">
-            <a href="/2017/01/08/2017-01-08-apply-and-call-in-js/">apply() and call() in JS</a>
-          </h3>
-        </div>
-        <div class="col-md-4">
-          <div class="date">post @ 2017-01-08</div>
-        </div>
-      </div>
-      <div class="entry">
-        <div class="row">
-          我在一开始看到javascript的函数apply和call时,非常的模糊,看也看不懂,最近在网上看到一些文章对apply方法和call的一些示例,总算是看的有点眉目了,在这里我做如下笔记,希望和大家分享.. 如有什么不对的或者说法不明确的地方希望读者多多提一些意见,以便共同提高..
-主要我是要解决一下几个问题:
-1.apply和call的区别在哪里
-2.什么情况下用apply,什么情况下用...
-        </div>
-        <a type="button" href="/2017/01/08/2017-01-08-apply-and-call-in-js/#more" class="btn btn-default more">阅读此文</a>
-      </div>
-      
-      <div class="row">
-        <div class="col-md-8">
-          <h3 class="title">
-            <a href="/2017/01/05/2017-01-05-my-new-post/">My New Post</a>
-          </h3>
-        </div>
-        <div class="col-md-4">
-          <div class="date">post @ 2017-01-05</div>
-        </div>
-      </div>
-      <div class="entry">
-        <div class="row">
-          上一页
-Home
-下一页
-留言
-2017-01-05
+    <h1>分类：前端</h1>
 
 
-
-📦 本文从 2017 年博客归档中恢复。
-
-
-        </div>
-        <a type="button" href="/2017/01/05/2017-01-05-my-new-post/#more" class="btn btn-default more">阅读此文</a>
-      </div>
-      
-      <div class="row">
-        <div class="col-md-8">
-          <h3 class="title">
-            <a href="/2017/01/05/2017-01-05-the-road-of-front-end/">The road of front-end</a>
-          </h3>
-        </div>
-        <div class="col-md-4">
-          <div class="date">post @ 2017-01-05</div>
-        </div>
-      </div>
-      <div class="entry">
-        <div class="row">
-          做一个个人网站，或者团队或者小组做一些介绍页面。 怎么做？搜索发现要学习：HTML、CSS。
-发现一个网站设计的好漂亮，交互真赞，动画效果真好。我想在我自己网站上也放上，可是我看不懂它的代码？搜索发现要学习：交互视觉、CSS3 动画等。
-他们网站上都有那种点击弹出浮层的功能，还有一些其他的更复杂的交互效果。怎么实现的？学习 JavaScript。
-有小学同学说我的个人网站错位了，问了下他用的...
-        </div>
-        <a type="button" href="/2017/01/05/2017-01-05-the-road-of-front-end/#more" class="btn btn-default more">阅读此文</a>
-      </div>
-      
-    </div>
+  <div class="post-item">
+    <h2><a href="/2017/02/11/2017-02-11-how-to-use-ajax/">How to use AJAX</a></h2>
+    <div class="meta">2017-02-11</div>
   </div>
 
-  <div class="col-md-3">
-    <div id="sidebar">
-      <div class="widget">
-        <h4>分类</h4>
-        <ul class="tag_box inline list-unstyled">
-          
-          <li><a href="/categories/%E9%9A%8F%E7%AC%94/">随笔<span>1</span></a></li>
-          
-          <li><a href="/categories/%E5%89%8D%E7%AB%AF/">前端<span>7</span></a></li>
-          
-        </ul>
-      </div>
-      <div class="widget">
-        <h4>标签云</h4>
-        <ul class="tag_box inline list-unstyled">
-          
-          <li><a href="/tags/%E6%B5%8B%E8%AF%95/">测试<span>1</span></a></li>
-          
-          <li><a href="/tags/Hexo/">Hexo<span>1</span></a></li>
-          
-          <li><a href="/tags/archive/">archive<span>7</span></a></li>
-          
-        </ul>
-      </div>
-      <div class="widget">
-        <h4>链接</h4>
-        <ul class="blogroll list-unstyled">
-          
-          <li><i class="fa fa-link"></i><a href="https://niflhum.top/gwsw/" target="_blank">公文收发系统</a></li>
-          
-          <li><i class="fa fa-link"></i><a href="https://github.com/niflhum" target="_blank">My Github</a></li>
-          
-          <li><i class="fa fa-link"></i><a href="https://github.com/kristopolous/BOOTSTRA.386" target="_blank">BOOTSTRA.386</a></li>
-          
-          <li><i class="fa fa-link"></i><a href="https://github.com/blackshow/hexo-theme-freemind.386" target="_blank">Freemind.386</a></li>
-          
-          <li><i class="fa fa-link"></i><a href="http://learngit.niflhum.win/" target="_blank">My Demo</a></li>
-          
-          <li><i class="fa fa-link"></i><a href="http://www.linkedin.com/in/niflhum" target="_blank">My LinkedIn</a></li>
-          
-        </ul>
-      </div>
-    </div>
-  </div>
-</div>
-
-    </div>
+  <div class="post-item">
+    <h2><a href="/2017/02/10/2017-02-10-404-not-found/">404 not found?</a></h2>
+    <div class="meta">2017-02-10</div>
   </div>
 
-  <div class="container-narrow">
-    <footer>
-      <p>
-        &copy; 2026 niflhum
-        with help from <a target="_blank" rel="noopener" href="http://github.com/niflhum">niflhum</a>,
-        <a href="http://getbootstrap.com/" target="_blank">Twitter Bootstrap</a> and
-        <a href="http://getbootstrap.com/" target="_blank">BOOTSTRA.386</a>.
-      </p>
-    </footer>
+  <div class="post-item">
+    <h2><a href="/2017/01/15/2017-01-15-about-clearfix/">about clearfix</a></h2>
+    <div class="meta">2017-01-15</div>
   </div>
 
-  <a id="gotop" href="#">
-    <span>⬆︎TOP</span>
-  </a>
+  <div class="post-item">
+    <h2><a href="/2017/01/09/2017-01-09-englishfrequently-employed-sentences/">English:frequently employed sentences</a></h2>
+    <div class="meta">2017-01-09</div>
+  </div>
 
-  <script src="/js/jquery.imagesloaded.min.js"></script>
-  <script src="/js/gallery.js"></script>
-  <script src="/js/bootstrap.min.js"></script>
-  <script src="/js/main.js"></script>
-  <script src="/js/search.js"></script>
-  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css" media="screen" type="text/css">
-  <script src="/fancybox/jquery.fancybox.pack.js"></script>
-  <script type="text/javascript">
-    (function($){
-      $('.fancybox').fancybox();
-    })(jQuery);
-  </script>
+  <div class="post-item">
+    <h2><a href="/2017/01/08/2017-01-08-apply-and-call-in-js/">apply() and call() in JS</a></h2>
+    <div class="meta">2017-01-08</div>
+  </div>
+
+  <div class="post-item">
+    <h2><a href="/2017/01/05/2017-01-05-my-new-post/">My New Post</a></h2>
+    <div class="meta">2017-01-05</div>
+  </div>
+
+  <div class="post-item">
+    <h2><a href="/2017/01/05/2017-01-05-the-road-of-front-end/">The road of front-end</a></h2>
+    <div class="meta">2017-01-05</div>
+  </div>
+
+
+  </div>
+
+  <footer>
+    <p>&copy; 2026 niflhum</p>
+    <p>Quod non fecerunt barbari, fecerunt Barberini.</p>
+  </footer>
 </body>
 </html>

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>404 — Niflhum</title>
+  <style>
+    :root {
+      --bg: #1a1410;
+      --card: #231e18;
+      --text: #c4b99a;
+      --heading: #d9ceb5;
+      --muted: #7a6e5d;
+      --accent: #8b3a3a;
+      --accent-glow: #a84848;
+      --border: #3a3028;
+      --divider: #2a241c;
+    }
+    * { margin:0; padding:0; box-sizing:border-box; }
+    body {
+      font-family: -apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Microsoft YaHei",sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      min-height:100vh;
+      display:flex; flex-direction:column; align-items:center; justify-content:center;
+      padding:2rem;
+      line-height:1.7;
+      text-align:center;
+    }
+    .container { max-width:500px; width:100%; }
+    h1 {
+      font-family: Georgia,"Noto Serif SC","Songti SC",serif;
+      font-size:5rem; color:var(--heading); font-weight:400;
+      margin-bottom:0.5rem; letter-spacing:-1px;
+    }
+    p { color:var(--text); font-size:1rem; margin-bottom:1.5rem; }
+    .divider { height:1px; background:var(--divider); margin:1.5rem 0; }
+    .nav { display:flex; gap:0; justify-content:center; flex-wrap:wrap; }
+    .nav a {
+      padding:0.5rem 1rem; color:var(--text); text-decoration:none;
+      font-size:0.85rem; border-bottom:1px solid var(--divider);
+      transition:all 0.2s;
+    }
+    .nav a:hover { color:var(--heading); border-bottom-color:var(--accent); }
+    .quote { font-family: Georgia,serif; font-style:italic; color:var(--muted); font-size:0.85rem; margin-top:2rem; }
+    @media (max-width:600px) {
+      h1 { font-size:3.5rem; }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>404</h1>
+    <p>这一页不在书房里。</p>
+    <div class="divider"></div>
+    <div class="nav">
+      <a href="/">首页</a>
+      <a href="/posts/">文章</a>
+      <a href="/garden/">知识库</a>
+      <a href="/projects/">项目</a>
+    </div>
+    <p class="quote">"Quod non fecerunt barbari, fecerunt Barberini."</p>
+  </div>
+</body>
+</html>
