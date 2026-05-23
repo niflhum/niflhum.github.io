@@ -126,9 +126,28 @@
       <a href="https://github.com/niflhum" class="quick-link">🐙 GitHub</a>
     </div>
 
+    <div id="dynamic-projects" style="margin-top:2rem; display:flex; flex-wrap:wrap; gap:0.8rem;"></div>
+
     <footer>
       <p>Things change, roll with it.</p>
     </footer>
   </div>
+  <script>
+    fetch('/garden/github-activity.json')
+      .then(r => r.json())
+      .then(data => {
+        if (!data.repos || !data.repos.length) return;
+        const list = data.repos.map(r =>
+          `<a href="${r.url}" class="project-card" target="_blank">
+            <strong>${r.name}</strong>
+            <span>${r.description || ''}</span>
+            <small>${r.language || ''} ${r.stars ? '★' + r.stars : ''}</small>
+          </a>`
+        ).join('');
+        const el = document.getElementById('dynamic-projects');
+        if (el) el.innerHTML = list;
+      })
+      .catch(console.error);
+  </script>
 </body>
 </html>
