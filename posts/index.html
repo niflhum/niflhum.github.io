@@ -3,27 +3,43 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>文章 — niflhum</title>
+<title>文章 — 梁睿</title>
 <style>
+  :root {
+    --bg: #1a1410; --card: #231e18; --text: #c4b99a;
+    --heading: #d9ceb5; --muted: #7a6e5d; --accent: #8b3a3a;
+    --border: #3a3028; --divider: #2a241c;
+  }
   * { margin:0; padding:0; box-sizing:border-box; }
-  body { font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Microsoft YaHei",sans-serif; background:#0a0a0a; color:#e0e0e0; min-height:100vh; display:flex; justify-content:center; padding:3rem 1rem; }
+  body {
+    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Microsoft YaHei",sans-serif;
+    background:var(--bg); color:var(--text); min-height:100vh;
+    display:flex; justify-content:center; padding:3rem 1rem; line-height:1.7;
+  }
   .page { max-width:640px; width:100%; }
-  h1 { font-size:1.8rem; font-weight:300; margin-bottom:0.5rem; letter-spacing:-0.5px; }
+  h1 {
+    font-family:Georgia,"Noto Serif SC",serif;
+    font-size:2.2rem; font-weight:400; color:var(--heading);
+    margin-bottom:0.3rem; letter-spacing:-0.5px;
+  }
   .back { margin-bottom:2rem; }
-  .back a { color:#666; text-decoration:none; font-size:0.9rem; }
-  .back a:hover { color:#aaa; }
-  .post { margin-bottom:1.5rem; padding-bottom:1.5rem; border-bottom:1px solid #1a1a1a; }
-  .post h2 { font-size:1.15rem; font-weight:500; margin-bottom:0.3rem; }
-  .post h2 a { color:#e0e0e0; text-decoration:none; }
-  .post h2 a:hover { color:#fff; }
-  .post .meta { font-size:0.8rem; color:#555; }
-  .archive-link { margin-top:1.5rem; font-size:0.85rem; }
-  .archive-link a { color:#555; text-decoration:none; }
+  .back a { color:var(--muted); text-decoration:none; font-size:0.85rem; }
+  .back a:hover { color:var(--accent); }
+  .post {
+    padding:1.2rem 0; border-bottom:1px solid var(--divider);
+  }
+  .post h2 { font-size:1.05rem; font-weight:500; margin-bottom:0.2rem; }
+  .post h2 a { color:var(--heading); text-decoration:none; }
+  .post h2 a:hover { color:var(--accent); }
+  .post .meta { font-size:0.75rem; color:var(--muted); }
+  footer { margin-top:2.5rem; text-align:center; }
+  footer a { color:var(--muted); text-decoration:none; font-size:0.85rem; }
+  footer a:hover { color:var(--accent); }
 </style>
 </head>
 <body>
 <div class="page">
-  <div class="back"><a href="/">← 返回首页</a></div>
+  <div class="back"><a href="/">← 梁睿</a></div>
   <h1>文章</h1>
 
   <div class="post">
@@ -35,9 +51,7 @@
     <div class="meta">2026-05-05</div>
   </div>
 
-  <div class="archive-link">
-    <a href="/archives/">查看全部文章（含 2017 年归档）→</a>
-  </div>
+  <footer><a href="/archives/">全部文章（含 2017 归档） →</a></footer>
 </div>
 </body>
 </html>

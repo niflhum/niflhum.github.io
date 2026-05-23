@@ -3,143 +3,99 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>梁睿 - 热爱手搓的程序员</title>
+  <meta name="description" content="梁睿的个人网站 — 公务员 · 前前端开发者 · 马基雅维利研究者">
+  <title>梁睿</title>
   <style>
-    * { margin: 0; padding: 0; box-sizing: border-box; }
+    :root {
+      --bg: #1a1410;
+      --card: #231e18;
+      --text: #c4b99a;
+      --heading: #d9ceb5;
+      --muted: #7a6e5d;
+      --accent: #8b3a3a;
+      --accent-glow: #a84848;
+      --border: #3a3028;
+      --divider: #2a241c;
+    }
+    * { margin:0; padding:0; box-sizing:border-box; }
     body {
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Microsoft YaHei", sans-serif;
-      background: #0a0a0a;
-      color: #e0e0e0;
-      min-height: 100vh;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      padding: 2rem;
-      line-height: 1.6;
+      font-family: -apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Microsoft YaHei",sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      min-height:100vh;
+      display:flex; flex-direction:column; align-items:center; justify-content:center;
+      padding:2rem;
+      line-height:1.7;
     }
-    .container {
-      max-width: 680px;
-      width: 100%;
-    }
+    .container { max-width:680px; width:100%; }
     h1 {
-      font-size: 2.5rem;
-      margin-bottom: 0.3rem;
-      color: #ffffff;
-      font-weight: 700;
+      font-family: Georgia,"Noto Serif SC","Songti SC",serif;
+      font-size:3rem; color:var(--heading); font-weight:400;
+      margin-bottom:0.2rem; letter-spacing:-0.5px;
     }
-    .tagline {
-      font-size: 1.2rem;
-      color: #888;
-      margin-bottom: 2rem;
+    .meta { color:var(--accent); font-size:0.8rem; letter-spacing:0.08em; margin-bottom:2.5rem; font-family:Georgia,serif; }
+    .divider { height:1px; background:var(--divider); margin:2rem 0; }
+    .card {
+      background:var(--card); border:1px solid var(--border);
+      padding:1.5rem; margin-bottom:1.5rem;
     }
-    .status-card {
-      background: #151515;
-      border: 1px solid #222;
-      border-radius: 8px;
-      padding: 1.5rem;
-      margin-bottom: 2rem;
+    .card h2 {
+      font-size:0.7rem; color:var(--muted); text-transform:uppercase;
+      letter-spacing:0.12em; margin-bottom:1rem; font-weight:500;
     }
-    .status-card h2 {
-      font-size: 0.85rem;
-      color: #aaa;
-      margin-bottom: 1rem;
-      text-transform: uppercase;
-      letter-spacing: 0.05em;
-      font-weight: 600;
+    .card p { font-size:0.92rem; color:var(--text); margin-bottom:0.5rem; }
+    .card p:last-child { margin-bottom:0; }
+    .label { color:var(--accent); font-size:0.75rem; margin-right:0.5rem; }
+    .nav { display:flex; gap:0; margin-bottom:2rem; }
+    .nav a {
+      padding:0.6rem 1.4rem; color:var(--text); text-decoration:none;
+      font-size:0.85rem; border-bottom:1px solid var(--divider);
+      transition:all 0.2s;
     }
-    .status-item {
-      display: flex;
-      align-items: center;
-      margin-bottom: 0.75rem;
-      font-size: 0.95rem;
+    .nav a:hover { color:var(--heading); border-bottom-color:var(--accent); }
+    .project-list { display:flex; flex-wrap:wrap; gap:0.5rem; margin-top:1rem; }
+    .project-card {
+      display:block; padding:0.5rem 0.8rem; background:var(--bg);
+      border:1px solid var(--border); text-decoration:none;
+      color:var(--text); font-size:0.8rem; min-width:160px;
+      transition:all 0.2s;
     }
-    .status-item:last-child {
-      margin-bottom: 0;
+    .project-card:hover { border-color:var(--accent); color:var(--heading); }
+    .project-card strong { display:block; font-size:0.85rem; color:var(--heading); margin-bottom:0.15rem; }
+    .project-card small { color:var(--muted); font-size:0.7rem; }
+    footer { margin-top:3rem; color:var(--muted); font-size:0.8rem; text-align:center; }
+    @media (max-width:600px) {
+      h1 { font-size:2.2rem; }
+      .nav { flex-direction:column; }
+      .nav a { text-align:center; }
+      .project-list { flex-direction:column; }
     }
-    .status-icon {
-      margin-right: 0.75rem;
-      font-size: 1.2rem;
-      flex-shrink: 0;
-    }
-    .quick-links {
-      display: flex;
-      gap: 1rem;
-      flex-wrap: wrap;
-      margin-bottom: 2rem;
-    }
-    .quick-link {
-      padding: 0.75rem 1.5rem;
-      background: #151515;
-      border: 1px solid #333;
-      border-radius: 6px;
-      color: #e0e0e0;
-      text-decoration: none;
-      font-size: 0.9rem;
-      transition: all 0.2s;
-    }
-    .quick-link:hover {
-      background: #222;
-      border-color: #555;
-      color: #fff;
-    }
-    footer {
-      margin-top: 3rem;
-      color: #555;
-      font-size: 0.9rem;
-      text-align: center;
-    }
-    /* 移动端适配 */
-    @media (max-width: 600px) {
-      h1 { font-size: 1.8rem; }
-      .tagline { font-size: 1rem; }
-      .quick-links { flex-direction: column; }
-      .quick-link { text-align: center; }
-      .project-list { flex-direction: column; }
-    }
-    .project-list { display:flex; flex-wrap:wrap; gap:0.8rem; margin-top:1.5rem; justify-content:center; }
-    .project-card { 
-      display:block; padding:0.6rem 1rem; background:var(--card-bg,#f8f8f8);
-      border-radius:8px; text-decoration:none; color:inherit; min-width:180px;
-    }
-    .project-card:hover { background:var(--card-hover,#eee); }
-    .project-card strong { display:block; font-size:0.95rem; }
-    .project-card span { display:block; font-size:0.8rem; color:#666; margin:0.2rem 0; }
-    .project-card small { font-size:0.75rem; color:#999; }
   </style>
 </head>
 <body>
   <div class="container">
     <h1>梁睿</h1>
-    <p class="tagline">热爱手搓的程序员</p>
+    <p class="meta">EFFETUAL TRUTH ·&nbsp;实效真理</p>
 
-    <div class="status-card">
-      <h2>正在做什么</h2>
-      <div class="status-item">
-        <span class="status-icon">🔨</span>
-        <span>QClaw/Hermes 插件系统调试与文档编写</span>
-      </div>
-      <div class="status-item">
-        <span class="status-icon">📖</span>
-        <span>在读：《康熙的红票》《被统治的艺术》</span>
-      </div>
-      <div class="status-item">
-        <span class="status-icon">💭</span>
-        <span>最近想法：马基雅维利的"命运"概念是一种概率论</span>
-      </div>
+    <div class="card">
+      <h2>现在</h2>
+      <p><span class="label">🔨</span>QClaw / Hermes 插件开发与文档</p>
+      <p><span class="label">📖</span>《康熙的红票》《被统治的艺术》</p>
+      <p><span class="label">💭</span>马基雅维利的"命运"概念是一种概率论</p>
     </div>
 
-    <div class="quick-links">
-      <a href="/posts/" class="quick-link">📝 文章</a>
-      <a href="/garden/" class="quick-link">🌿 知识库</a>
-      <a href="/projects/" class="quick-link">💻 项目</a>
-      <a href="https://github.com/niflhum" class="quick-link">🐙 GitHub</a>
+    <div class="nav">
+      <a href="/posts/">文章</a>
+      <a href="/garden/">知识库</a>
+      <a href="/projects/">项目</a>
+      <a href="https://github.com/niflhum">GitHub</a>
     </div>
 
     <div id="dynamic-projects" class="project-list"></div>
 
+    <div class="divider"></div>
     <footer>
-      <p>Things change, roll with it.</p>
+      <p>Quod non fecerunt barbari, fecerunt Barberini.</p>
     </footer>
   </div>
   <script>
@@ -150,14 +106,10 @@
         const list = data.repos.map(r =>
           `<a href="${r.url}" class="project-card" target="_blank">
             <strong>${r.name}</strong>
-            <span>${r.description || ''}</span>
-            <small>${r.language || ''} ${r.stars ? '★' + r.stars : ''}</small>
-          </a>`
-        ).join('');
-        const el = document.getElementById('dynamic-projects');
-        if (el) el.innerHTML = list;
-      })
-      .catch(console.error);
+            <small>${r.language||''} ${r.stars?'★'+r.stars:''}</small>
+          </a>`).join('');
+        document.getElementById('dynamic-projects').innerHTML = list;
+      }).catch(()=>{});
   </script>
 </body>
 </html>
