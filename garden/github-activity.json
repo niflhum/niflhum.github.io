@@ -1,12 +1,20 @@
 {
-  "updated": "2026-05-23T14:35:50.486Z",
+  "updated": "2026-05-23T14:55:21.622Z",
   "repos": [
+    {
+      "name": "machiavelli-library",
+      "description": "",
+      "language": "HTML",
+      "stars": 0,
+      "pushed_at": "2026-05-23T14:45:15Z",
+      "url": "https://github.com/niflhum/machiavelli-library"
+    },
     {
       "name": "niflhum.github.io",
       "description": "",
       "language": "HTML",
       "stars": 0,
-      "pushed_at": "2026-05-23T14:27:01Z",
+      "pushed_at": "2026-05-23T14:35:55Z",
       "url": "https://github.com/niflhum/niflhum.github.io"
     },
     {
@@ -24,14 +32,6 @@
       "stars": 0,
       "pushed_at": "2026-05-23T04:53:39Z",
       "url": "https://github.com/niflhum/hermes-agent"
-    },
-    {
-      "name": "machiavelli-library",
-      "description": "",
-      "language": "Python",
-      "stars": 0,
-      "pushed_at": "2026-05-23T04:34:58Z",
-      "url": "https://github.com/niflhum/machiavelli-library"
     },
     {
       "name": "gwsw",
