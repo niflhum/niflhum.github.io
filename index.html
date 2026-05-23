@@ -1,272 +1,134 @@
-<!DOCTYPE HTML>
-<html>
+<!DOCTYPE html>
+<html lang="zh-CN">
 <head>
-  <meta charset="utf-8">
-  <meta http-equiv="pragma" content="no-cache">
-  <meta http-equiv="cache-control" content="no-cache">
-  <meta http-equiv="expires" content="0">
-
-  <title>-梁睿-</title>
-  <meta name="author" content="niflhum">
-  <meta name="description" content="Job seekers">
-  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:site_name" content="-梁睿-"/>
-  <meta property="og:image" content="undefined"/>
-  <link href="/favicon.png" rel="icon">
-  <link rel="stylesheet" href="/css/bootstrap.min.css" media="screen" type="text/css">
-  <link rel="stylesheet" href="/css/font-awesome.css" media="screen" type="text/css">
-  <link rel="stylesheet" href="/css/style.css" media="screen" type="text/css">
-  <link rel="stylesheet" href="/css/responsive.css" media="screen" type="text/css">
-  <link rel="stylesheet" href="/css/highlight.css" media="screen" type="text/css">
-  <link rel="stylesheet" href="/css/google-fonts.css" media="screen" type="text/css">
-  <!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
-  <script src="/js/jquery-2.0.3.min.js"></script>
-<meta name="generator" content="Hexo 8.1.1"></head>
-
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>梁睿 - 热爱手搓的程序员</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Microsoft YaHei", sans-serif;
+      background: #0a0a0a;
+      color: #e0e0e0;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 2rem;
+      line-height: 1.6;
+    }
+    .container {
+      max-width: 680px;
+      width: 100%;
+    }
+    h1 {
+      font-size: 2.5rem;
+      margin-bottom: 0.3rem;
+      color: #ffffff;
+      font-weight: 700;
+    }
+    .tagline {
+      font-size: 1.2rem;
+      color: #888;
+      margin-bottom: 2rem;
+    }
+    .status-card {
+      background: #151515;
+      border: 1px solid #222;
+      border-radius: 8px;
+      padding: 1.5rem;
+      margin-bottom: 2rem;
+    }
+    .status-card h2 {
+      font-size: 0.85rem;
+      color: #aaa;
+      margin-bottom: 1rem;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      font-weight: 600;
+    }
+    .status-item {
+      display: flex;
+      align-items: center;
+      margin-bottom: 0.75rem;
+      font-size: 0.95rem;
+    }
+    .status-item:last-child {
+      margin-bottom: 0;
+    }
+    .status-icon {
+      margin-right: 0.75rem;
+      font-size: 1.2rem;
+      flex-shrink: 0;
+    }
+    .quick-links {
+      display: flex;
+      gap: 1rem;
+      flex-wrap: wrap;
+      margin-bottom: 2rem;
+    }
+    .quick-link {
+      padding: 0.75rem 1.5rem;
+      background: #151515;
+      border: 1px solid #333;
+      border-radius: 6px;
+      color: #e0e0e0;
+      text-decoration: none;
+      font-size: 0.9rem;
+      transition: all 0.2s;
+    }
+    .quick-link:hover {
+      background: #222;
+      border-color: #555;
+      color: #fff;
+    }
+    footer {
+      margin-top: 3rem;
+      color: #555;
+      font-size: 0.9rem;
+      text-align: center;
+    }
+    /* 移动端适配 */
+    @media (max-width: 600px) {
+      h1 { font-size: 1.8rem; }
+      .tagline { font-size: 1rem; }
+      .quick-links { flex-direction: column; }
+      .quick-link { text-align: center; }
+    }
+  </style>
+</head>
 <body>
-  <nav id="main-nav" class="navbar navbar-inverse navbar-fixed-top" role="navigation">
-    <div class="container">
-      <button type="button" class="navbar-header navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-        <span class="sr-only">Toggle navigation</span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-      </button>
-      <a class="navbar-brand" href="/">-梁睿-</a>
-      <div class="collapse navbar-collapse nav-menu">
-        <ul class="nav navbar-nav">
-          
-          <li>
-            <a href="/archives" title="Archives">
-              <i class=""></i>Archives
-            </a>
-          </li>
-          
-          <li>
-            <a href="/categories" title="Categories">
-              <i class=""></i>Categories
-            </a>
-          </li>
-          
-          <li>
-            <a href="/tags" title="Tags">
-              <i class=""></i>Tags
-            </a>
-          </li>
-          
-          <li>
-            <a target="_blank" rel="noopener" href="http://learngit.niflhum.win/" title="About">
-              <i class=""></i>About
-            </a>
-          </li>
-          
-          <li>
-            <a href="/atom.xml" title="RSS">
-              <i class=""></i>RSS
-            </a>
-          </li>
-          
-        </ul>
-      </div>
-    </div>
-  </nav>
-  <div class="clearfix"></div>
-
   <div class="container">
-    <div class="content">
-      <div class="page-header logo">
-  <h1>-梁睿-<span class="blink-fast">∎</span></h1>
-</div>
+    <h1>梁睿</h1>
+    <p class="tagline">热爱手搓的程序员</p>
 
-<div class="row page">
-  <div class="col-md-9">
-    <div class="slogan">
-      <i class="fa fa-heart blink-slow"></i>
-      Things change, roll with it.
-    </div>
-    <div id="top_search"></div>
-    <div class="mypage">
-
-      
-      <div class="row">
-        <div class="col-md-8">
-          <h3 class="title">
-            <a href="/2026/05/05/%E6%89%AC%E5%B8%86%E8%B5%B7%E8%88%AA/">扬帆起航</a>
-          </h3>
-        </div>
-        <div class="col-md-4">
-          <div class="date">post @ 2026-05-05</div>
-        </div>
+    <div class="status-card">
+      <h2>正在做什么</h2>
+      <div class="status-item">
+        <span class="status-icon">🔨</span>
+        <span>QClaw/Hermes 插件系统调试与文档编写</span>
       </div>
-
-      <div class="entry">
-        <div class="row">
-          在我的后园，可以看见墙外有两株树，一株是枣树，还有一株也是枣树。
-这上面的夜的天空，奇怪而高，我生平没有见过这样奇怪而高的天空。他仿佛要离开人间而去，使人们仰面不再看见。然而现在却非常之蓝，闪闪地䀹着几十个星星的眼，冷眼。他的口角上现出微笑，似乎自以为大有深意，而将繁霜洒在我的园里的野花草上。
-
-        </div>
-        <a type="button" href="/2026/05/05/%E6%89%AC%E5%B8%86%E8%B5%B7%E8%88%AA/#more" class="btn btn-default more">阅读此文</a>
+      <div class="status-item">
+        <span class="status-icon">📖</span>
+        <span>在读：《康熙的红票》《被统治的艺术》</span>
       </div>
-      
-      <div class="row">
-        <div class="col-md-8">
-          <h3 class="title">
-            <a href="/2026/05/05/%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E7%AF%87%E6%96%B0%E6%96%87%E7%AB%A0/">我的第一篇新文章</a>
-          </h3>
-        </div>
-        <div class="col-md-4">
-          <div class="date">post @ 2026-05-05</div>
-        </div>
+      <div class="status-item">
+        <span class="status-icon">💭</span>
+        <span>最近想法：马基雅维利的"命运"概念是一种概率论</span>
       </div>
-
-      <div class="entry">
-        <div class="row">
-          这是用 Hexo 重建博客后的第一篇文章。
-Hexo 使用方法
-新建文章：hexo new &quot;文章标题&quot;
-编辑 Markdown 文件
-生成静态文件：hexo generate
-发布到 GitHub：./deploy.sh
-
-快捷命令123456789# 新建文章cd ~/niflhum-bloghexo new &quot;新文章标题&quot;# 本地预览（可选）he...
-        </div>
-        <a type="button" href="/2026/05/05/%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E7%AF%87%E6%96%B0%E6%96%87%E7%AB%A0/#more" class="btn btn-default more">阅读此文</a>
-      </div>
-      
-      <div class="row">
-        <div class="col-md-8">
-          <h3 class="title">
-            <a href="/2026/05/05/hello-world/">Hello World</a>
-          </h3>
-        </div>
-        <div class="col-md-4">
-          <div class="date">post @ 2026-05-05</div>
-        </div>
-      </div>
-
-      <div class="entry">
-        <div class="row">
-          Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub.
-Qu...
-        </div>
-        <a type="button" href="/2026/05/05/hello-world/#more" class="btn btn-default more">阅读此文</a>
-      </div>
-      
-
     </div>
 
-    
-
-  </div>
-
-  <div class="col-md-3">
-    <div id="sidebar">
-      <div id="site_search">
-        <div class="form-group">
-          <input type="text" id="local-search-input" name="q" results="0" placeholder="搜索" class="st-search-input st-default-search-input form-control"/>
-        </div>
-        <div id="local-search-result"></div>
-      </div>
-
-      
-      <div class="widget">
-        <h4>分类</h4>
-        <ul class="tag_box inline list-unstyled">
-          
-          <li><a href="/categories/%E9%9A%8F%E7%AC%94/">随笔<span>1</span></a></li>
-          
-        </ul>
-      </div>
-      
-
-      
-      <div class="widget">
-        <h4>标签云</h4>
-        <ul class="tag_box inline list-unstyled">
-          
-          <li><a href="/tags/%E6%B5%8B%E8%AF%95/">测试<span>1</span></a></li>
-          
-          <li><a href="/tags/Hexo/">Hexo<span>1</span></a></li>
-          
-        </ul>
-      </div>
-      
-
-      
-      <div class="widget">
-        <h4>最新文章</h4>
-        <ul class="entry list-unstyled">
-          
-          <li>
-            <a href="/2026/05/05/%E6%89%AC%E5%B8%86%E8%B5%B7%E8%88%AA/"><i class="fa fa-file-o"></i>扬帆起航</a>
-          </li>
-          
-          <li>
-            <a href="/2026/05/05/%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E7%AF%87%E6%96%B0%E6%96%87%E7%AB%A0/"><i class="fa fa-file-o"></i>我的第一篇新文章</a>
-          </li>
-          
-          <li>
-            <a href="/2026/05/05/hello-world/"><i class="fa fa-file-o"></i>Hello World</a>
-          </li>
-          
-        </ul>
-      </div>
-      
-
-      
-      <div class="widget">
-        <h4>链接</h4>
-        <ul class="blogroll list-unstyled">
-          
-          <li><i class="fa fa-link"></i><a href="https://niflhum.top/gwsw/" title="公文收发系统" target="_blank">公文收发系统</a></li>
-          
-          <li><i class="fa fa-link"></i><a href="https://github.com/niflhum" title="My Github" target="_blank">My Github</a></li>
-          
-          <li><i class="fa fa-link"></i><a href="https://github.com/kristopolous/BOOTSTRA.386" title="BOOTSTRA.386" target="_blank">BOOTSTRA.386</a></li>
-          
-          <li><i class="fa fa-link"></i><a href="https://github.com/blackshow/hexo-theme-freemind.386" title="Freemind.386" target="_blank">Freemind.386</a></li>
-          
-          <li><i class="fa fa-link"></i><a href="http://learngit.niflhum.win/" title="My Demo" target="_blank">My Demo</a></li>
-          
-          <li><i class="fa fa-link"></i><a href="http://www.linkedin.com/in/niflhum" title="My LinkedIn" target="_blank">My LinkedIn</a></li>
-          
-        </ul>
-      </div>
-      
-
+    <div class="quick-links">
+      <a href="/posts/" class="quick-link">📝 文章</a>
+      <a href="/garden/" class="quick-link">🌿 知识库</a>
+      <a href="/projects/" class="quick-link">💻 项目</a>
+      <a href="https://github.com/niflhum" class="quick-link">🐙 GitHub</a>
     </div>
-  </div>
-</div>
 
-    </div>
-  </div>
-
-  <div class="container-narrow">
     <footer>
-      <p>
-        &copy; 2026 niflhum
-        with help from <a target="_blank" rel="noopener" href="http://github.com/niflhum">niflhum</a>,
-        <a href="http://getbootstrap.com/" target="_blank">Twitter Bootstrap</a> and
-        <a href="http://getbootstrap.com/" target="_blank">BOOTSTRA.386</a>.
-      </p>
+      <p>Things change, roll with it.</p>
     </footer>
   </div>
-
-  <a id="gotop" href="#">
-    <span>⬆︎TOP</span>
-  </a>
-
-  <script src="/js/jquery.imagesloaded.min.js"></script>
-  <script src="/js/gallery.js"></script>
-  <script src="/js/bootstrap.min.js"></script>
-  <script src="/js/main.js"></script>
-  <script src="/js/search.js"></script>
-  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css" media="screen" type="text/css">
-  <script src="/fancybox/jquery.fancybox.pack.js"></script>
-  <script type="text/javascript">
-    (function($){
-      $('.fancybox').fancybox();
-    })(jQuery);
-  </script>
 </body>
 </html>
