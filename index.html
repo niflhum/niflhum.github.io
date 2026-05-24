@@ -91,16 +91,17 @@
       font-size:0.7rem; color:var(--muted); text-transform:uppercase;
       letter-spacing:0.12em; margin-bottom:1rem; font-weight:500;
     }
-    .card .row {
-      display:flex; align-items:baseline; gap:0.6rem;
-      margin-bottom:0.55rem; font-size:0.92rem;
+    .now-line {
+      margin-bottom:0.7rem; font-size:0.9rem; line-height:1.65;
+      color:var(--text); padding-left:0.8rem;
+      border-left:2px solid var(--accent);
     }
-    .card .row:last-child { margin-bottom:0 }
-    .card .label {
-      color:var(--accent); font-family:Georgia,serif;
-      font-size:0.7rem; font-weight:600;
-      min-width:1.5rem; text-align:center;
+    .now-line:last-child { margin-bottom:0 }
+    .now-line em {
+      font-style:normal; color:var(--heading);
+      font-family:Georgia,"Noto Serif SC",serif;
     }
+    .now-line .dim { color:var(--muted); font-size:0.82rem }
 
     /* Featured */
     .featured {
@@ -175,16 +176,19 @@
       <p class="identity">马基雅维利研究者 · 偶尔写代码</p>
     </div>
 
-    <img src="/assets/study-room.png" alt="" class="hero-image" loading="lazy">
+    <picture>
+      <source srcset="/assets/study-room.webp" type="image/webp">
+      <img src="/assets/study-room.png" alt="" class="hero-image" loading="lazy" width="960" height="540">
+    </picture>
 
     <div class="ornament">◆ ◇ ◆</div>
 
     <!-- Now -->
     <div class="card">
       <h2>现在</h2>
-      <div class="row"><span class="label">工</span>QClaw / Hermes 插件开发与文档</div>
-      <div class="row"><span class="label">读</span>《康熙的红票》《被统治的艺术》</div>
-      <div class="row"><span class="label">思</span>马基雅维利的"命运"概念是一种概率论</div>
+      <div class="now-line">在写 <em>QClaw</em> 和 <em>Hermes</em> 的插件，顺带理文档</div>
+      <div class="now-line">翻着 <em>《康熙的红票》</em> 和 <em>《被统治的艺术》</em>，历史书越读越上瘾</div>
+      <div class="now-line"><em>马基雅维利的"命运"</em>到底算不算一种概率论？这个问题还在想</div>
     </div>
 
     <!-- Featured -->
