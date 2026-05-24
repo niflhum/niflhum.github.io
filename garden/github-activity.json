@@ -1,6 +1,14 @@
 {
-  "updated": "2026-05-24T06:02:26.104Z",
+  "updated": "2026-05-24T06:09:54.250Z",
   "repos": [
+    {
+      "name": "niflhum.github.io",
+      "description": "🏠 Niflhum的个人网站——Hexo博客 + VitePress数字花园 + 自定义首页，Lo Scrittoio暗暖书房主题 ",
+      "language": "HTML",
+      "stars": 0,
+      "pushed_at": "2026-05-24T06:05:45Z",
+      "url": "https://github.com/niflhum/niflhum.github.io"
+    },
     {
       "name": "machiavelli-library",
       "description": "📚 马基雅维利原文图书馆——17本著作、618文件、中英双语、全文可检索 ",
@@ -8,14 +16,6 @@
       "stars": 0,
       "pushed_at": "2026-05-24T05:56:19Z",
       "url": "https://github.com/niflhum/machiavelli-library"
-    },
-    {
-      "name": "niflhum.github.io",
-      "description": "🏠 Niflhum的个人网站——Hexo博客 + VitePress数字花园 + 自定义首页，Lo Scrittoio暗暖书房主题 ",
-      "language": "HTML",
-      "stars": 0,
-      "pushed_at": "2026-05-24T05:56:08Z",
-      "url": "https://github.com/niflhum/niflhum.github.io"
     },
     {
       "name": "machiavelli-skill",
