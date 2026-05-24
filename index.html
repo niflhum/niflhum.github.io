@@ -1,243 +1,154 @@
-<!DOCTYPE html>
+<!DOCTYPE HTML>
 <html lang="zh-CN">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Niflhum — 马基雅维利研究者 · 效用真理 · 数字花园">
+  <meta charset="utf-8">
+
   <title>Niflhum</title>
+  <meta name="author" content="niflhum">
+  <meta name="description" content="Niflhum 的个人网站 — 公务员 · 前前端开发者 · 马基雅维利研究者">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta property="og:site_name" content="Niflhum"/>
+  <meta property="og:title" content="Niflhum"/>
+  <meta property="og:description" content="Niflhum 的个人网站 — 公务员 · 前前端开发者 · 马基雅维利研究者"/>
+  <meta property="og:type" content="website"/>
+  <meta property="og:image" content="https://niflhum.top/favicon.png"/>
+  <link href="/favicon.png?v=2" rel="icon">
+  <link rel="apple-touch-icon" href="/favicon.png?v=2">
   <style>
     :root {
-      --bg: #1a1410;
-      --card: #231e18;
-      --card-hover: #2a2418;
-      --text: #c4b99a;
-      --heading: #d9ceb5;
-      --muted: #7a6e5d;
-      --accent: #8b3a3a;
-      --accent-glow: #a84848;
-      --border: #3a3028;
-      --divider: #2a241c;
-      --tag-bg: #2a2018;
+      --bg: #1a1410; --card: #231e18; --text: #c4b99a;
+      --heading: #d9ceb5; --muted: #7a6e5d; --accent: #8b3a3a;
+      --accent-glow: #a84848; --border: #3a3028; --divider: #2a241c;
     }
     * { margin:0; padding:0; box-sizing:border-box; }
     body {
       font-family: -apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Microsoft YaHei",sans-serif;
-      background: var(--bg);
-      color: var(--text);
-      min-height:100vh;
-      display:flex; flex-direction:column; align-items:center;
-      padding:0;
-      line-height:1.7;
+      background: var(--bg); color: var(--text);
+      min-height: 100vh; line-height: 1.75;
     }
-
-    /* ── Global Nav ── */
-    .site-nav {
-      width:100%; max-width:760px; padding:1.2rem 2rem;
-      display:flex; align-items:center; gap:1.5rem;
-      font-size:0.82rem;
+    /* Navigation */
+    .top-nav {
+      background: rgba(26,20,16,0.95);
+      border-bottom: 1px solid var(--border);
+      position: sticky; top: 0; z-index: 100;
+      padding: 0.6rem 1rem;
     }
-    .site-nav .brand {
-      font-family:Georgia,"Noto Serif SC",serif;
-      color:var(--heading); text-decoration:none;
-      font-size:0.95rem; letter-spacing:-0.3px;
+    .top-nav .inner {
+      max-width: 720px; margin: 0 auto;
+      display: flex; align-items: center; justify-content: space-between;
+      flex-wrap: wrap; gap: 0.4rem;
     }
-    .site-nav .brand:hover { color:var(--accent-glow) }
-    .site-nav .sep { color:var(--border); margin:0 -0.3rem }
-    .site-nav a { color:var(--muted); text-decoration:none; transition:color 0.2s }
-    .site-nav a:hover { color:var(--heading) }
-    .site-nav a.current { color:var(--text); font-weight:500 }
-
-    /* ── Content ── */
-    .container { max-width:680px; width:100%; padding:3rem 2rem 2rem; }
-
-    /* Hero */
-    .hero { margin-bottom:2.5rem; position:relative }
-    .hero h1 {
+    .top-nav .brand {
+      font-family: Georgia,"Noto Serif SC",serif;
+      font-size: 1.1rem; color: var(--heading); text-decoration: none;
+    }
+    .top-nav .brand:hover { color: var(--accent); }
+    .top-nav .links { display: flex; gap: 0.3rem; flex-wrap: wrap; }
+    .top-nav .links a {
+      color: var(--muted); text-decoration: none; font-size: 0.82rem;
+      padding: 0.25rem 0.6rem; border-radius: 2px; transition: all 0.2s;
+    }
+    .top-nav .links a:hover { color: var(--heading); background: var(--card); }
+    /* Content */
+    .container { max-width: 720px; margin: 0 auto; padding: 2rem 1rem 3rem; }
+    h1, h2, h3 {
       font-family: Georgia,"Noto Serif SC","Songti SC",serif;
-      font-size:3rem; color:var(--heading); font-weight:400;
-      letter-spacing:-0.5px; margin-bottom:0.15rem;
+      font-weight: 400; color: var(--heading);
     }
-    .hero .tagline {
-      color:var(--accent); font-size:0.78rem;
-      letter-spacing:0.1em; margin-bottom:0.5rem;
-      font-family:Georgia,serif;
+    h1 { font-size: 2rem; margin-bottom: 0.5rem; letter-spacing: -0.5px; }
+    h2 { font-size: 1.3rem; margin: 1.5rem 0 0.5rem; }
+    h3 { font-size: 1.05rem; margin: 1.2rem 0 0.3rem; color: var(--text); }
+    a { color: var(--accent); text-decoration: none; }
+    a:hover { color: var(--accent-glow); }
+    p { margin-bottom: 0.8rem; }
+    ul, ol { margin: 0.5rem 0 0.8rem 1.5rem; }
+    li { margin: 0.3rem 0; }
+    code {
+      background: var(--card); color: var(--text);
+      padding: 0.1rem 0.4rem; border-radius: 3px;
+      font-size: 0.9em;
     }
-    .hero .identity {
-      color:var(--muted); font-size:0.82rem;
+    pre {
+      background: var(--card); border: 1px solid var(--border);
+      padding: 1rem; overflow-x: auto; margin: 0.8rem 0;
+      border-radius: 3px;
     }
-
-    /* Hero atmosphere image */
-    .hero-image {
-      width:100%; height:180px; object-fit:cover;
-      border:1px solid var(--border); margin-bottom:2rem;
-      opacity:0.7; transition:opacity 0.4s;
+    pre code { background: none; padding: 0; }
+    blockquote {
+      border-left: 3px solid var(--accent);
+      background: rgba(139,58,58,0.08);
+      padding: 0.5rem 1rem; margin: 0.8rem 0;
+      color: #a89878; font-style: italic;
     }
-    .hero-image:hover { opacity:0.9 }
-
-    /* Decorative line */
-    .ornament {
-      text-align:center; color:var(--border); font-size:0.7rem;
-      letter-spacing:0.6em; margin-bottom:2rem; user-select:none;
+    hr { border: none; border-top: 1px solid var(--divider); margin: 1.5rem 0; }
+    table { border-collapse: collapse; width: 100%; margin: 0.8rem 0; }
+    th, td { border: 1px solid var(--border); padding: 0.4rem 0.8rem; text-align: left; }
+    th { background: var(--card); color: var(--heading); font-weight: 500; }
+    /* Post meta */
+    .post-date { color: var(--muted); font-size: 0.82rem; margin-bottom: 1.5rem; }
+    .post-meta-section { margin-top: 2rem; padding-top: 1rem; border-top: 1px solid var(--divider); }
+    .post-meta-section h4 { color: var(--muted); font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 0.5rem; }
+    .tag-list { display: flex; flex-wrap: wrap; gap: 0.4rem; list-style: none; margin: 0; }
+    .tag-list li { margin: 0; }
+    .tag-list a {
+      display: inline-block; padding: 0.15rem 0.6rem;
+      background: var(--card); border: 1px solid var(--border);
+      color: var(--muted); font-size: 0.78rem; text-decoration: none;
+      transition: all 0.2s;
     }
-
-    /* Now Card */
-    .card {
-      background:var(--card); border:1px solid var(--border);
-      padding:1.5rem; margin-bottom:2rem;
-      transition:border-color 0.3s;
+    .tag-list a:hover { border-color: var(--accent); color: var(--heading); }
+    /* Archive / list pages */
+    .post-item {
+      padding: 1rem 0; border-bottom: 1px solid var(--divider);
     }
-    .card:hover { border-color:var(--accent) }
-    .card h2 {
-      font-size:0.7rem; color:var(--muted); text-transform:uppercase;
-      letter-spacing:0.12em; margin-bottom:1rem; font-weight:500;
-    }
-    .now-line {
-      margin-bottom:0.7rem; font-size:0.9rem; line-height:1.65;
-      color:var(--text); padding-left:0.8rem;
-      border-left:2px solid var(--accent);
-    }
-    .now-line:last-child { margin-bottom:0 }
-    .now-line em {
-      font-style:normal; color:var(--heading);
-      font-family:Georgia,"Noto Serif SC",serif;
-    }
-    .now-line .dim { color:var(--muted); font-size:0.82rem }
-
-    /* Featured */
-    .featured {
-      background:var(--card); border:1px solid var(--accent);
-      padding:1.2rem 1.5rem; margin-bottom:2rem;
-      display:flex; align-items:center; gap:1rem;
-      transition:all 0.25s;
-    }
-    .featured:hover { border-color:var(--accent-glow); transform:translateY(-1px) }
-    .featured .badge {
-      font-size:0.6rem; color:var(--accent-glow);
-      text-transform:uppercase; letter-spacing:0.1em;
-      writing-mode:vertical-rl; text-orientation:mixed;
-    }
-    .featured h3 { font-size:0.95rem; color:var(--heading); font-weight:500; margin-bottom:0.2rem }
-    .featured p { font-size:0.82rem; color:var(--muted) }
-    .featured a { color:inherit; text-decoration:none }
-
-    /* Project Grid */
-    .section-label {
-      font-size:0.7rem; color:var(--muted); text-transform:uppercase;
-      letter-spacing:0.12em; margin-bottom:0.8rem; font-weight:500;
-    }
-    .project-grid { display:grid; grid-template-columns:1fr 1fr; gap:0.6rem; margin-bottom:2rem }
-    .project-card {
-      display:block; padding:1rem; background:var(--card);
-      border:1px solid var(--border); text-decoration:none;
-      color:var(--text); transition:all 0.25s;
-    }
-    .project-card:hover { border-color:var(--accent); background:var(--card-hover); transform:translateY(-2px); box-shadow:0 4px 12px rgba(0,0,0,0.3) }
-    .project-card strong { display:block; font-size:0.88rem; color:var(--heading); margin-bottom:0.2rem }
-    .project-card small { color:var(--muted); font-size:0.72rem }
-    .project-card .lang-tag {
-      display:inline-block; font-size:0.6rem; color:var(--accent);
-      background:var(--tag-bg); padding:0.1rem 0.35rem;
-      margin-top:0.4rem; border:1px solid var(--border);
-    }
-
+    .post-item h2 { font-size: 1rem; margin: 0 0 0.2rem; }
+    .post-item h2 a { color: var(--heading); text-decoration: none; }
+    .post-item h2 a:hover { color: var(--accent); }
+    .post-item .meta { font-size: 0.78rem; color: var(--muted); }
+    /* Footer */
     footer {
-      margin-top:auto; padding:2rem; color:var(--muted);
-      font-size:0.8rem; text-align:center; width:100%;
+      text-align: center; padding: 2rem 1rem; color: var(--muted);
+      font-size: 0.8rem; border-top: 1px solid var(--divider);
     }
-    footer .motto { font-family:Georgia,serif; font-style:italic; margin-bottom:0.3rem }
-
-    @media (max-width:600px) {
-      .container { padding:2rem 1rem 1.5rem }
-      .hero h1 { font-size:2.2rem }
-      .site-nav { padding:1rem; gap:0.8rem; flex-wrap:wrap }
-      .project-grid { grid-template-columns:1fr }
-      .featured { flex-direction:column; text-align:center }
-      .featured .badge { writing-mode:horizontal-tb }
+    footer p { margin-bottom: 0.3rem; }
+    /* Back link */
+    .back-link { margin-bottom: 1.5rem; }
+    .back-link a { color: var(--muted); text-decoration: none; font-size: 0.85rem; }
+    .back-link a:hover { color: var(--accent); }
+    /* Year heading */
+    .year-heading { font-size: 1.3rem; margin: 1.5rem 0 0.5rem; color: var(--accent); }
+    @media (max-width: 600px) {
+      .top-nav .inner { flex-direction: column; align-items: flex-start; }
+      h1 { font-size: 1.5rem; }
     }
   </style>
+<meta name="generator" content="Hexo 8.1.1"><link rel="alternate" href="/atom.xml" title="Niflhum" type="application/atom+xml">
 </head>
-<body>
 
-  <!-- Global Nav -->
-  <nav class="site-nav">
-    <a href="/" class="brand">Niflhum</a>
-    <span class="sep">·</span>
-    <a href="/garden/">缪斯花园</a>
-    <a href="/projects/">项目</a>
-    <a href="/machiavelli-library/">图书馆</a>
+<body>
+  <nav class="top-nav">
+    <div class="inner">
+      <a class="brand" href="/">Niflhum</a>
+      <div class="links">
+        <a href="/">首页</a>
+        <a href="/posts/">文章</a>
+        <a href="/garden/">知识库</a>
+        <a href="/projects/">项目</a>
+      </div>
+    </div>
   </nav>
 
   <div class="container">
-    <!-- Hero -->
-    <div class="hero">
-      <h1>Niflhum</h1>
-      <p class="tagline">EFFECTUAL TRUTH · 实效真理</p>
-      <p class="identity">马基雅维利研究者 · 偶尔写代码</p>
-    </div>
+    <h1>Niflhum</h1>
+<p>欢迎光临我的个人网站。</p>
 
-    <picture>
-      <source srcset="/assets/study-room.webp" type="image/webp">
-      <img src="/assets/study-room.png" alt="" class="hero-image" loading="lazy" width="960" height="540">
-    </picture>
+<div class="back-link"><a href="/">← 回到首页</a></div>
 
-    <div class="ornament">◆ ◇ ◆</div>
-
-    <!-- Now -->
-    <div class="card">
-      <h2>现在</h2>
-      <div class="now-line">在写 <em>QClaw</em> 和 <em>Hermes</em> 的插件，顺带理文档</div>
-      <div class="now-line">翻着 <em>《康熙的红票》</em> 和 <em>《被统治的艺术》</em>，历史书越读越上瘾</div>
-      <div class="now-line"><em>马基雅维利的"命运"</em>到底算不算一种概率论？这个问题还在想</div>
-    </div>
-
-    <!-- Featured -->
-    <a href="https://niflhum.top/machiavelli-library/" class="featured">
-      <span class="badge">新</span>
-      <div>
-        <h3>马基雅维利原文图书馆</h3>
-        <p>17 本著作 · 中英双语 · 618 个文件 · 可检索</p>
-      </div>
-    </a>
-
-    <!-- Projects -->
-    <div class="section-label">项目</div>
-    <div class="project-grid">
-      <a href="https://github.com/niflhum/machiavelli-skill" class="project-card" target="_blank">
-        <strong>machiavelli-skill</strong>
-        <small>AI 马基雅维利数字分身 · 17 信条 · 14 案例</small>
-        <span class="lang-tag">Markdown</span>
-      </a>
-      <a href="https://github.com/niflhum/gwsw" class="project-card" target="_blank">
-        <strong>gwsw</strong>
-        <small>纯浏览器端 OCR 文字识别工具</small>
-        <span class="lang-tag">JavaScript</span>
-      </a>
-    </div>
-
-    <!-- Dynamic Projects -->
-    <div id="dynamic-projects" class="project-grid"></div>
   </div>
 
   <footer>
-    <p class="motto">Quod non fecerunt barbari, fecerunt Barberini.</p>
-    <p>野蛮人未做之事，巴贝里尼家族做了。</p>
+    <p>&copy; 2026 niflhum</p>
+    <p>Quod non fecerunt barbari, fecerunt Barberini.</p>
   </footer>
-
-  <script>
-    fetch('/garden/github-activity.json')
-      .then(r => r.json())
-      .then(data => {
-        if (!data.repos || !data.repos.length) return;
-        const EXCLUDED = ['machiavelli-library','machiavelli-skill','gwsw','niflhum.github.io'];
-        const others = data.repos.filter(r => !EXCLUDED.includes(r.name)).slice(0,4);
-        if (!others.length) return;
-        document.getElementById('dynamic-projects').innerHTML = others.map(r =>
-          `<a href="${r.url}" class="project-card" target="_blank">
-            <strong>${r.name}</strong>
-            <small>${r.description || (r.language||'')}</small>
-            ${r.language ? '<span class="lang-tag">'+r.language+'</span>' : ''}
-          </a>`).join('');
-      }).catch(()=>{});
-  </script>
 </body>
 </html>
