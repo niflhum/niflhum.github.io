@@ -1,153 +1,116 @@
-<!DOCTYPE HTML>
+<!DOCTYPE html>
 <html lang="zh-CN">
 <head>
-  <meta charset="utf-8">
-
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Niflhum的个人网站 — 公务员 · 前前端开发者 · 马基雅维利研究者">
   <title>Niflhum</title>
-  <meta name="author" content="niflhum">
-  <meta name="description" content="Niflhum 的个人网站 — 公务员 · 前前端开发者 · 马基雅维利研究者">
-  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:site_name" content="Niflhum"/>
-  <meta property="og:title" content="Niflhum"/>
-  <meta property="og:description" content="Niflhum 的个人网站 — 公务员 · 前前端开发者 · 马基雅维利研究者"/>
-  <meta property="og:type" content="website"/>
-  <meta property="og:image" content="https://niflhum.top/favicon.png"/>
-  <link href="/favicon.png" rel="icon">
   <style>
     :root {
-      --bg: #1a1410; --card: #231e18; --text: #c4b99a;
-      --heading: #d9ceb5; --muted: #7a6e5d; --accent: #8b3a3a;
-      --accent-glow: #a84848; --border: #3a3028; --divider: #2a241c;
+      --bg: #1a1410;
+      --card: #231e18;
+      --text: #c4b99a;
+      --heading: #d9ceb5;
+      --muted: #7a6e5d;
+      --accent: #8b3a3a;
+      --accent-glow: #a84848;
+      --border: #3a3028;
+      --divider: #2a241c;
     }
     * { margin:0; padding:0; box-sizing:border-box; }
     body {
       font-family: -apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Microsoft YaHei",sans-serif;
-      background: var(--bg); color: var(--text);
-      min-height: 100vh; line-height: 1.75;
+      background: var(--bg);
+      color: var(--text);
+      min-height:100vh;
+      display:flex; flex-direction:column; align-items:center; justify-content:center;
+      padding:2rem;
+      line-height:1.7;
     }
-    /* Navigation */
-    .top-nav {
-      background: rgba(26,20,16,0.95);
-      border-bottom: 1px solid var(--border);
-      position: sticky; top: 0; z-index: 100;
-      padding: 0.6rem 1rem;
-    }
-    .top-nav .inner {
-      max-width: 720px; margin: 0 auto;
-      display: flex; align-items: center; justify-content: space-between;
-      flex-wrap: wrap; gap: 0.4rem;
-    }
-    .top-nav .brand {
-      font-family: Georgia,"Noto Serif SC",serif;
-      font-size: 1.1rem; color: var(--heading); text-decoration: none;
-    }
-    .top-nav .brand:hover { color: var(--accent); }
-    .top-nav .links { display: flex; gap: 0.3rem; flex-wrap: wrap; }
-    .top-nav .links a {
-      color: var(--muted); text-decoration: none; font-size: 0.82rem;
-      padding: 0.25rem 0.6rem; border-radius: 2px; transition: all 0.2s;
-    }
-    .top-nav .links a:hover { color: var(--heading); background: var(--card); }
-    /* Content */
-    .container { max-width: 720px; margin: 0 auto; padding: 2rem 1rem 3rem; }
-    h1, h2, h3 {
+    .container { max-width:680px; width:100%; }
+    h1 {
       font-family: Georgia,"Noto Serif SC","Songti SC",serif;
-      font-weight: 400; color: var(--heading);
+      font-size:3rem; color:var(--heading); font-weight:400;
+      margin-bottom:0.2rem; letter-spacing:-0.5px;
     }
-    h1 { font-size: 2rem; margin-bottom: 0.5rem; letter-spacing: -0.5px; }
-    h2 { font-size: 1.3rem; margin: 1.5rem 0 0.5rem; }
-    h3 { font-size: 1.05rem; margin: 1.2rem 0 0.3rem; color: var(--text); }
-    a { color: var(--accent); text-decoration: none; }
-    a:hover { color: var(--accent-glow); }
-    p { margin-bottom: 0.8rem; }
-    ul, ol { margin: 0.5rem 0 0.8rem 1.5rem; }
-    li { margin: 0.3rem 0; }
-    code {
-      background: var(--card); color: var(--text);
-      padding: 0.1rem 0.4rem; border-radius: 3px;
-      font-size: 0.9em;
+    .meta { color:var(--accent); font-size:0.8rem; letter-spacing:0.08em; margin-bottom:2.5rem; font-family:Georgia,serif; }
+    .divider { height:1px; background:var(--divider); margin:2rem 0; }
+    .card {
+      background:var(--card); border:1px solid var(--border);
+      padding:1.5rem; margin-bottom:1.5rem;
     }
-    pre {
-      background: var(--card); border: 1px solid var(--border);
-      padding: 1rem; overflow-x: auto; margin: 0.8rem 0;
-      border-radius: 3px;
+    .card h2 {
+      font-size:0.7rem; color:var(--muted); text-transform:uppercase;
+      letter-spacing:0.12em; margin-bottom:1rem; font-weight:500;
     }
-    pre code { background: none; padding: 0; }
-    blockquote {
-      border-left: 3px solid var(--accent);
-      background: rgba(139,58,58,0.08);
-      padding: 0.5rem 1rem; margin: 0.8rem 0;
-      color: #a89878; font-style: italic;
+    .card p { font-size:0.92rem; color:var(--text); margin-bottom:0.5rem; }
+    .card p:last-child { margin-bottom:0; }
+    .label { color:var(--accent); font-size:0.75rem; margin-right:0.5rem; }
+    .nav { display:flex; gap:0; margin-bottom:2rem; }
+    .nav a {
+      padding:0.6rem 1.4rem; color:var(--text); text-decoration:none;
+      font-size:0.85rem; border-bottom:1px solid var(--divider);
+      transition:all 0.2s;
     }
-    hr { border: none; border-top: 1px solid var(--divider); margin: 1.5rem 0; }
-    table { border-collapse: collapse; width: 100%; margin: 0.8rem 0; }
-    th, td { border: 1px solid var(--border); padding: 0.4rem 0.8rem; text-align: left; }
-    th { background: var(--card); color: var(--heading); font-weight: 500; }
-    /* Post meta */
-    .post-date { color: var(--muted); font-size: 0.82rem; margin-bottom: 1.5rem; }
-    .post-meta-section { margin-top: 2rem; padding-top: 1rem; border-top: 1px solid var(--divider); }
-    .post-meta-section h4 { color: var(--muted); font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 0.5rem; }
-    .tag-list { display: flex; flex-wrap: wrap; gap: 0.4rem; list-style: none; margin: 0; }
-    .tag-list li { margin: 0; }
-    .tag-list a {
-      display: inline-block; padding: 0.15rem 0.6rem;
-      background: var(--card); border: 1px solid var(--border);
-      color: var(--muted); font-size: 0.78rem; text-decoration: none;
-      transition: all 0.2s;
+    .nav a:hover { color:var(--heading); border-bottom-color:var(--accent); }
+    .project-list { display:flex; flex-wrap:wrap; gap:0.5rem; margin-top:1rem; }
+    .project-card {
+      display:block; padding:0.5rem 0.8rem; background:var(--bg);
+      border:1px solid var(--border); text-decoration:none;
+      color:var(--text); font-size:0.8rem; min-width:160px;
+      transition:all 0.2s;
     }
-    .tag-list a:hover { border-color: var(--accent); color: var(--heading); }
-    /* Archive / list pages */
-    .post-item {
-      padding: 1rem 0; border-bottom: 1px solid var(--divider);
-    }
-    .post-item h2 { font-size: 1rem; margin: 0 0 0.2rem; }
-    .post-item h2 a { color: var(--heading); text-decoration: none; }
-    .post-item h2 a:hover { color: var(--accent); }
-    .post-item .meta { font-size: 0.78rem; color: var(--muted); }
-    /* Footer */
-    footer {
-      text-align: center; padding: 2rem 1rem; color: var(--muted);
-      font-size: 0.8rem; border-top: 1px solid var(--divider);
-    }
-    footer p { margin-bottom: 0.3rem; }
-    /* Back link */
-    .back-link { margin-bottom: 1.5rem; }
-    .back-link a { color: var(--muted); text-decoration: none; font-size: 0.85rem; }
-    .back-link a:hover { color: var(--accent); }
-    /* Year heading */
-    .year-heading { font-size: 1.3rem; margin: 1.5rem 0 0.5rem; color: var(--accent); }
-    @media (max-width: 600px) {
-      .top-nav .inner { flex-direction: column; align-items: flex-start; }
-      h1 { font-size: 1.5rem; }
+    .project-card:hover { border-color:var(--accent); color:var(--heading); }
+    .project-card strong { display:block; font-size:0.85rem; color:var(--heading); margin-bottom:0.15rem; }
+    .project-card small { color:var(--muted); font-size:0.7rem; }
+    footer { margin-top:3rem; color:var(--muted); font-size:0.8rem; text-align:center; }
+    @media (max-width:600px) {
+      h1 { font-size:2.2rem; }
+      .nav { flex-direction:column; }
+      .nav a { text-align:center; }
+      .project-list { flex-direction:column; }
+      .project-card { min-width:unset; }
     }
   </style>
-<meta name="generator" content="Hexo 8.1.1"><link rel="alternate" href="/atom.xml" title="Niflhum" type="application/atom+xml">
 </head>
-
 <body>
-  <nav class="top-nav">
-    <div class="inner">
-      <a class="brand" href="/">Niflhum</a>
-      <div class="links">
-        <a href="/">首页</a>
-        <a href="/posts/">文章</a>
-        <a href="/garden/">知识库</a>
-        <a href="/projects/">项目</a>
-      </div>
-    </div>
-  </nav>
-
   <div class="container">
     <h1>Niflhum</h1>
-<p>欢迎光临我的个人网站。</p>
+    <p class="meta">EFFETUAL TRUTH ·&nbsp;实效真理</p>
 
-<div class="back-link"><a href="/">← 回到首页</a></div>
+    <div class="card">
+      <h2>现在</h2>
+      <p><span class="label">🔨</span>QClaw / Hermes 插件开发与文档</p>
+      <p><span class="label">📖</span>《康熙的红票》《被统治的艺术》</p>
+      <p><span class="label">💭</span>马基雅维利的"命运"概念是一种概率论</p>
+    </div>
 
+    <div class="nav">
+      <a href="/posts/">文章</a>
+      <a href="/garden/">知识库</a>
+      <a href="/projects/">项目</a>
+      <a href="https://github.com/niflhum">GitHub</a>
+    </div>
+
+    <div id="dynamic-projects" class="project-list"></div>
+
+    <div class="divider"></div>
+    <footer>
+      <p>Quod non fecerunt barbari, fecerunt Barberini.</p>
+    </footer>
   </div>
-
-  <footer>
-    <p>&copy; 2026 niflhum</p>
-    <p>Quod non fecerunt barbari, fecerunt Barberini.</p>
-  </footer>
+  <script>
+    fetch('/garden/github-activity.json')
+      .then(r => r.json())
+      .then(data => {
+        if (!data.repos || !data.repos.length) return;
+        const list = data.repos.map(r =>
+          `<a href="${r.url}" class="project-card" target="_blank">
+            <strong>${r.name}</strong>
+            <small>${r.language||''} ${r.stars?'★'+r.stars:''}</small>
+          </a>`).join('');
+        document.getElementById('dynamic-projects').innerHTML = list;
+      }).catch(()=>{});
+  </script>
 </body>
 </html>
