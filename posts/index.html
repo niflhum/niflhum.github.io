@@ -14,33 +14,77 @@
   body {
     font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Microsoft YaHei",sans-serif;
     background:var(--bg); color:var(--text); min-height:100vh;
-    display:flex; justify-content:center; padding:3rem 1rem; line-height:1.7;
+    display:flex; flex-direction:column; align-items:center; padding:0; line-height:1.7;
   }
-  .page { max-width:640px; width:100%; }
+
+  /* Global Nav */
+  .site-nav {
+    width:100%; max-width:760px; padding:1.2rem 2rem;
+    display:flex; align-items:center; gap:1.5rem; font-size:0.82rem;
+  }
+  .site-nav .brand { font-family:Georgia,"Noto Serif SC",serif; color:var(--heading); text-decoration:none; font-size:0.95rem; letter-spacing:-0.3px }
+  .site-nav .brand:hover { color:var(--accent) }
+  .site-nav .sep { color:var(--border); margin:0 -0.3rem }
+  .site-nav a { color:var(--muted); text-decoration:none; transition:color 0.2s }
+  .site-nav a:hover { color:var(--heading) }
+  .site-nav a.current { color:var(--text); font-weight:500 }
+
+  .page { max-width:680px; width:100%; padding:2.5rem 2rem 3rem }
   h1 {
     font-family:Georgia,"Noto Serif SC",serif;
-    font-size:2.2rem; font-weight:400; color:var(--heading);
-    margin-bottom:0.3rem; letter-spacing:-0.5px;
+    font-size:2rem; font-weight:400; color:var(--heading);
+    margin-bottom:0.5rem; letter-spacing:-0.5px;
   }
-  .back { margin-bottom:2rem; }
-  .back a { color:var(--muted); text-decoration:none; font-size:0.85rem; }
-  .back a:hover { color:var(--accent); }
+  .page-desc { color:var(--muted); font-size:0.85rem; margin-bottom:2rem }
+
   .post {
     padding:1.2rem 0; border-bottom:1px solid var(--divider);
   }
-  .post h2 { font-size:1.05rem; font-weight:500; margin-bottom:0.2rem; }
-  .post h2 a { color:var(--heading); text-decoration:none; }
-  .post h2 a:hover { color:var(--accent); }
-  .post .meta { font-size:0.75rem; color:var(--muted); }
-  footer { margin-top:2.5rem; text-align:center; }
-  footer a { color:var(--muted); text-decoration:none; font-size:0.85rem; }
-  footer a:hover { color:var(--accent); }
+  .post h2 { font-size:1.05rem; font-weight:500; margin-bottom:0.25rem }
+  .post h2 a { color:var(--heading); text-decoration:none; transition:color 0.2s }
+  .post h2 a:hover { color:var(--accent) }
+  .post .meta { font-size:0.75rem; color:var(--muted) }
+  .post .excerpt { font-size:0.85rem; color:var(--text); margin-top:0.4rem; opacity:0.8 }
+
+  /* CTA for more content */
+  .cta-box {
+    margin-top:2rem; padding:1.5rem; background:var(--card);
+    border:1px solid var(--border); text-align:center;
+  }
+  .cta-box p { color:var(--muted); font-size:0.85rem; margin-bottom:0.6rem }
+  .cta-box a {
+    color:var(--heading); text-decoration:none; font-size:0.9rem;
+    border-bottom:1px solid var(--accent); padding-bottom:0.1rem;
+    transition:color 0.2s;
+  }
+  .cta-box a:hover { color:var(--accent-glow) }
+
+  footer { margin-top:auto; padding:2rem; text-align:center }
+  footer a { color:var(--muted); text-decoration:none; font-size:0.82rem }
+  footer a:hover { color:var(--accent) }
+
+  @media(max-width:600px){
+    .page { padding:1.5rem 1rem 2rem }
+    .site-nav { padding:1rem; gap:0.8rem; flex-wrap:wrap }
+    h1 { font-size:1.6rem }
+  }
 </style>
 </head>
 <body>
+
+<!-- Global Nav -->
+<nav class="site-nav">
+  <a href="/" class="brand">Niflhum</a>
+  <span class="sep">·</span>
+  <a href="/posts/" class="current">文章</a>
+  <a href="/garden/">知识库</a>
+  <a href="/projects/">项目</a>
+  <a href="/machiavelli-library/">图书馆</a>
+</nav>
+
 <div class="page">
-  <div class="back"><a href="/">← Niflhum</a></div>
   <h1>文章</h1>
+  <p class="page-desc">偶尔写点什么，不定期更新。</p>
 
   <div class="post">
     <h2><a href="/2026/05/05/扬帆起航/">扬帆起航</a></h2>
@@ -51,7 +95,12 @@
     <div class="meta">2026-05-05</div>
   </div>
 
-  <footer><a href="/archives/">全部文章（含 2017 归档） →</a></footer>
+  <div class="cta-box">
+    <p>更多内容在知识库和图书馆里生长 ↓</p>
+    <a href="/garden/">逛一逛知识库</a>
+  </div>
 </div>
+
+<footer><a href="/archives/">全部文章（含归档） →</a></footer>
 </body>
 </html>
