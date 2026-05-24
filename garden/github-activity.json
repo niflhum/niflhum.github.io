@@ -1,0 +1,45 @@
+{
+  "updated": "2026-05-24T15:04:59.479Z",
+  "repos": [
+    {
+      "name": "niflhum.github.io",
+      "description": "🏠 Niflhum的个人网站——Hexo博客 + VitePress数字花园 + 自定义首页，Lo Scrittoio暗暖书房主题 ",
+      "language": "HTML",
+      "stars": 0,
+      "pushed_at": "2026-05-24T14:43:06Z",
+      "url": "https://github.com/niflhum/niflhum.github.io"
+    },
+    {
+      "name": "machiavelli-library",
+      "description": "📚 马基雅维利原文图书馆——17本著作、618文件、中英双语、全文可检索 ",
+      "language": "HTML",
+      "stars": 0,
+      "pushed_at": "2026-05-24T13:37:05Z",
+      "url": "https://github.com/niflhum/machiavelli-library"
+    },
+    {
+      "name": "machiavelli-skill",
+      "description": "基于马基雅维利全集蒸馏而成的 AI 数字分身 / A conversational digital twin of Niccolò Machiavelli distilled from his com",
+      "language": "JavaScript",
+      "stars": 2,
+      "pushed_at": "2026-05-24T13:32:40Z",
+      "url": "https://github.com/niflhum/machiavelli-skill"
+    },
+    {
+      "name": "hermes-agent",
+      "description": "🤖 The agent that grows with you——让AI从干活的升级为一起干的 ",
+      "language": null,
+      "stars": 0,
+      "pushed_at": "2026-05-23T04:53:39Z",
+      "url": "https://github.com/niflhum/hermes-agent"
+    },
+    {
+      "name": "gwsw",
+      "description": "🔍 纯浏览器端OCR文字识别工具——无需后端，前端完成图片文字提取 ",
+      "language": "HTML",
+      "stars": 0,
+      "pushed_at": "2026-05-05T06:54:54Z",
+      "url": "https://github.com/niflhum/gwsw"
+    }
+  ]
+}
