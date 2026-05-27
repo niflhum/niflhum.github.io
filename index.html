@@ -174,7 +174,7 @@
     <div class="hero">
       <h1>Niflhum</h1>
       <p class="tagline">EFFECTUAL TRUTH · 实效真理</p>
-      <p class="identity">马基雅维利研究者 · 偶尔写代码</p>
+      <p class="identity">马基雅维利 · 我的好朋友</p>
     </div>
 
     <picture>
@@ -184,12 +184,10 @@
 
     <div class="ornament">◆ ◇ ◆</div>
 
-    <!-- 花园最新 -->
+    <!-- 花园最新（动态生成，由 tools/generate-latest-json.py + deploy.sh 自动更新） -->
     <div class="card">
       <h2>缪斯花园·最新</h2>
-      <div class="now-line"><a href="garden/seeds/unequal-friends/" style="color:inherit;text-decoration:none">致走在高处的朋友</a> <span class="dim">— 一个被命运摔落的人，关于友谊的实话</span></div>
-      <div class="now-line"><a href="garden/research/necessity-creativity/" style="color:inherit;text-decoration:none">必然性与创造力</a> <span class="dim">— 为什么最好的作品产生于困境</span></div>
-      <div class="now-line"><a href="garden/seeds/stand-alone/" style="color:inherit;text-decoration:none">致独当一面的你</a> <span class="dim">— 当所有人都指望你，但没有人在你前面挡着</span></div>
+      <div id="latest-posts"><div class="now-line dim">加载中…</div></div>
     </div>
 
     <!-- Featured -->
@@ -240,6 +238,20 @@
             ${r.language ? '<span class="lang-tag">'+r.language+'</span>' : ''}
           </a>`).join('');
       }).catch(()=>{});
+  </script>
+  <script>
+    fetch('/latest.json')
+      .then(r => r.json())
+      .then(posts => {
+        const el = document.getElementById('latest-posts');
+        if (!posts.length) return;
+        el.innerHTML = posts.map(p =>
+          `<div class="now-line"><a href="${p.url}" style="color:inherit;text-decoration:none">${p.title}</a> <span class="dim">— ${p.desc}</span></div>`
+        ).join('');
+      })
+      .catch(() => {
+        document.getElementById('latest-posts').innerHTML = '<div class="now-line dim">花园在生长…</div>';
+      });
   </script>
 </body>
 </html>
