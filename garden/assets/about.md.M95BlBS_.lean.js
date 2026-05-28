@@ -1,0 +1,1 @@
+import{c as t,Q as e,j as r,m as o}from"./chunks/framework.hhGiamYR.js";const c=JSON.parse('{"title":"关于","description":"","frontmatter":{},"headers":[],"relativePath":"about.md","filePath":"about.md"}'),i={name:"about.md"};function l(n,a,s,h,u,d){return e(),r("div",null,[...a[0]||(a[0]=[o("",11)])])}const m=t(i,[["render",l]]);export{c as __pageData,m as default};
