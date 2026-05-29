@@ -1,21 +1,21 @@
 {
-  "updated": "2026-05-29T14:52:45.314Z",
+  "updated": "2026-05-29T15:14:02.560Z",
   "repos": [
-    {
-      "name": "niflhum.github.io",
-      "description": "🏠 Niflhum的个人网站——Hexo博客 + VitePress数字花园 + 自定义首页，Lo Scrittoio暗暖书房主题 ",
-      "language": "HTML",
-      "stars": 0,
-      "pushed_at": "2026-05-29T11:55:46Z",
-      "url": "https://github.com/niflhum/niflhum.github.io"
-    },
     {
       "name": "machiavelli-skill",
       "description": "基于马基雅维利全集蒸馏而成的 AI 数字分身 / A conversational digital twin of Niccolò Machiavelli distilled from his com",
       "language": "JavaScript",
       "stars": 2,
-      "pushed_at": "2026-05-27T11:51:57Z",
+      "pushed_at": "2026-05-29T15:09:14Z",
       "url": "https://github.com/niflhum/machiavelli-skill"
+    },
+    {
+      "name": "niflhum.github.io",
+      "description": "🏠 Niflhum的个人网站——Hexo博客 + VitePress数字花园 + ��定义首页，Lo Scrittoio暗暖书房主题 ",
+      "language": "HTML",
+      "stars": 0,
+      "pushed_at": "2026-05-29T14:52:50Z",
+      "url": "https://github.com/niflhum/niflhum.github.io"
     },
     {
       "name": "machiavelli-library",
