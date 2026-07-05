@@ -5,8 +5,15 @@
     <link>https://niflhum.top/garden/</link>
     <description>Niflhum的个人数字花园 — 马基雅维利实效真理</description>
     <language>zh-CN</language>
-    <lastBuildDate>Sun, 28 Jun 2026 08:00:00 +0800</lastBuildDate>
+    <lastBuildDate>Sun, 05 Jul 2026 08:00:00 +0800</lastBuildDate>
     <atom:link href="https://niflhum.top/garden/rss.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title>回到源头——一个佛罗伦萨人关于制度如何不死的最诚实的答案</title>
+      <link>https://niflhum.top/garden/research/return-to-the-origin/</link>
+      <description>我来告诉你们一个例子。</description>
+      <pubDate>Sun, 05 Jul 2026 08:00:00 +0800</pubDate>
+      <guid isPermaLink="true">https://niflhum.top/garden/research/return-to-the-origin/</guid>
+    </item>
     <item>
       <title>狮子与狐狸——一个关于力量与狡黠的隐喻，和它被误解的五百年</title>
       <link>https://niflhum.top/garden/research/lion-and-fox/</link>
@@ -139,13 +146,6 @@
       <description>virtù 被比作**弓力**——一种可以被量化、有限的、需要精准使用的能力。你不是无限强大的，你必须知道自己的 virtù 有多少，然后瞄准得比目标更高。这是极为个人主义化的隐喻：弓在一个人手里，由一个人的力量拉开。</description>
       <pubDate>Sun, 24 May 2026 08:00:00 +0800</pubDate>
       <guid isPermaLink="true">https://niflhum.top/garden/seeds/virtu-split/</guid>
-    </item>
-    <item>
-      <title>马基雅维利的命运概念是一种概率论</title>
-      <link>https://niflhum.top/garden/research/fortune-probability.html</link>
-      <description>轮子隐喻被解读为&quot;宿命论&quot;——你在轮子上，迟早会被压到。但如果你把轮子看作一个**周期性概率模型**，解读完全不同：</description>
-      <pubDate>Sat, 23 May 2026 08:00:00 +0800</pubDate>
-      <guid isPermaLink="true">https://niflhum.top/garden/research/fortune-probability.html</guid>
     </item>
   </channel>
 </rss>
