@@ -5,8 +5,15 @@
     <link>https://niflhum.top/garden/</link>
     <description>Niflhum的个人数字花园 — 马基雅维利实效真理</description>
     <language>zh-CN</language>
-    <lastBuildDate>Sun, 05 Jul 2026 08:00:00 +0800</lastBuildDate>
+    <lastBuildDate>Sun, 19 Jul 2026 08:00:00 +0800</lastBuildDate>
     <atom:link href="https://niflhum.top/garden/rss.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title>畏惧与爱戴——马基雅维利最著名也最被误解的一句话</title>
+      <link>https://niflhum.top/garden/research/fear-and-love/</link>
+      <description>这个对比是马基雅维利式论证的精髓所在：他不辩论&quot;残酷是否道德&quot;，他直接比较后果。一种是少数人受罚、多数人受益的&quot;残酷&quot;，另一种是以仁慈之名坐视整个城市毁灭的&quot;仁慈&quot;。哪一个是真正的仁慈？哪一个是真正的残酷？他让你自己判断。</description>
+      <pubDate>Sun, 19 Jul 2026 08:00:00 +0800</pubDate>
+      <guid isPermaLink="true">https://niflhum.top/garden/research/fear-and-love/</guid>
+    </item>
     <item>
       <title>回到源头——一个佛罗伦萨人关于制度如何不死的最诚实的答案</title>
       <link>https://niflhum.top/garden/research/return-to-the-origin/</link>
@@ -87,14 +94,14 @@
     <item>
       <title>致刚走上领导岗位的年轻人·再及——喀戎、地狱与一封补充的信</title>
       <link>https://niflhum.top/garden/seeds/young-leader-part2/</link>
-      <description>这不是&quot;变成坏人&quot;。这是**两个工具箱都打开。**</description>
+      <description>这不是&quot;变成坏人&quot;。这是两个工具箱都打开。</description>
       <pubDate>Fri, 29 May 2026 08:00:00 +0800</pubDate>
       <guid isPermaLink="true">https://niflhum.top/garden/seeds/young-leader-part2/</guid>
     </item>
     <item>
       <title>致刚走上领导岗位的年轻人——两封信</title>
       <link>https://niflhum.top/garden/seeds/young-leader/</link>
-      <description>这不是说他们&quot;是坏人&quot;。这是说他们是**和你一样的人**——动机复杂、趋利避害、在评估每一个处境时先算自己的得失。把这一点看清楚，你的&quot;道德困境&quot;会消失一半。你不是在管&quot;坏人&quot;——你是在管&quot;正常人&quot;。而正常人在没有外部压力的时候，倾向于不做额外的事。</description>
+      <description>这不是说他们&quot;是坏人&quot;。这是说他们是和你一样的人——动机复杂、趋利避害、在评估每一个处境时先算自己的得失。把这一点看清楚，你的&quot;道德困境&quot;会消失一半。你不是在管&quot;坏人&quot;——你是在管&quot;正常人&quot;。而正常人在没有外部压力的时候，倾向于不做额外的事。</description>
       <pubDate>Fri, 29 May 2026 08:00:00 +0800</pubDate>
       <guid isPermaLink="true">https://niflhum.top/garden/seeds/young-leader/</guid>
     </item>
@@ -139,13 +146,6 @@
       <description>你进入任何领域，第一件事不是问&quot;这里应该怎样&quot;，而是搞清楚：这里实际在发生什么？谁有权力？谁的利益被触动会反击？你可以怀着最美好的理想，但如果看不清楚这些，你的理想撑不过第一个回合。</description>
       <pubDate>Sun, 24 May 2026 08:00:00 +0800</pubDate>
       <guid isPermaLink="true">https://niflhum.top/garden/seeds/elder-counsel/</guid>
-    </item>
-    <item>
-      <title>virtù 的两条线——从君主之刃到公民之墙</title>
-      <link>https://niflhum.top/garden/seeds/virtu-split/</link>
-      <description>virtù 被比作**弓力**——一种可以被量化、有限的、需要精准使用的能力。你不是无限强大的，你必须知道自己的 virtù 有多少，然后瞄准得比目标更高。这是极为个人主义化的隐喻：弓在一个人手里，由一个人的力量拉开。</description>
-      <pubDate>Sun, 24 May 2026 08:00:00 +0800</pubDate>
-      <guid isPermaLink="true">https://niflhum.top/garden/seeds/virtu-split/</guid>
     </item>
   </channel>
 </rss>
