@@ -5,8 +5,15 @@
     <link>https://niflhum.top/garden/</link>
     <description>Niflhum的个人数字花园 — 马基雅维利实效真理</description>
     <language>zh-CN</language>
-    <lastBuildDate>Sun, 19 Jul 2026 08:00:00 +0800</lastBuildDate>
+    <lastBuildDate>Thu, 30 Jul 2026 08:00:00 +0800</lastBuildDate>
     <atom:link href="https://niflhum.top/garden/rss.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title>制定规则的人——马基雅维利《兵法》中一个被严重低估的政治真理</title>
+      <link>https://niflhum.top/garden/research/rule-maker-not-rule-taker/</link>
+      <description>全书的论证线索是这样的：一支好军队不是靠雇佣兵建立的——雇佣兵不忠、贪财、打仗不敢流血；一支好军队只能从本国公民中征集，用国民军（ordinanza）的方式训练，按照罗马的制度组织起来。法布里齐奥花了两卷的篇幅讲如何选拔、武装、编组、训练这支军队，把每一个细节都像拆木桶板那样拆开又拼回去。然后，在第二卷的末尾——经过了近三百句的技术性阐述之后——他把话说到了最高处：做这一切的目的，不是为了你比别人</description>
+      <pubDate>Thu, 30 Jul 2026 08:00:00 +0800</pubDate>
+      <guid isPermaLink="true">https://niflhum.top/garden/research/rule-maker-not-rule-taker/</guid>
+    </item>
     <item>
       <title>畏惧与爱戴——马基雅维利最著名也最被误解的一句话</title>
       <link>https://niflhum.top/garden/research/fear-and-love/</link>
@@ -139,13 +146,6 @@
       <description>巴杰罗宫如今是国立美术馆，陈列着多纳泰罗的雕塑。游客可以买票进去，欣赏文艺复兴鼎盛时期警察局的美学。但关我的监房在地面以下，没有光线，虱子&quot;又大又圆，简直就像蝴蝶&quot;（这是我自己在狱中写的诗）。</description>
       <pubDate>Sun, 24 May 2026 08:00:00 +0800</pubDate>
       <guid isPermaLink="true">https://niflhum.top/garden/research/robes-in-the-study/</guid>
-    </item>
-    <item>
-      <title>致初入人世的年轻人——一个被命运摔打过的佛罗伦萨人的五条忠告</title>
-      <link>https://niflhum.top/garden/seeds/elder-counsel/</link>
-      <description>你进入任何领域，第一件事不是问&quot;这里应该怎样&quot;，而是搞清楚：这里实际在发生什么？谁有权力？谁的利益被触动会反击？你可以怀着最美好的理想，但如果看不清楚这些，你的理想撑不过第一个回合。</description>
-      <pubDate>Sun, 24 May 2026 08:00:00 +0800</pubDate>
-      <guid isPermaLink="true">https://niflhum.top/garden/seeds/elder-counsel/</guid>
     </item>
   </channel>
 </rss>
