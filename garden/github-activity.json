@@ -1,5 +1,5 @@
 {
-  "updated": "2026-08-01T02:50:25.304Z",
+  "updated": "2026-08-08T12:54:56.960Z",
   "repos": [
     {
       "name": "niflhum.github.io",
@@ -13,7 +13,7 @@
       "name": "machiavelli-skill",
       "description": "基于马基雅维利全集蒸馏而成的 AI 数字分身 / A conversational digital twin of Niccolò Machiavelli distilled from his com",
       "language": "JavaScript",
-      "stars": 2,
+      "stars": 3,
       "pushed_at": "2026-06-11T10:21:00Z",
       "url": "https://github.com/niflhum/machiavelli-skill"
     },
