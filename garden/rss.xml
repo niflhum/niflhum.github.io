@@ -5,8 +5,15 @@
     <link>https://niflhum.top/garden/</link>
     <description>Niflhum的个人数字花园 — 马基雅维利实效真理</description>
     <language>zh-CN</language>
-    <lastBuildDate>Thu, 30 Jul 2026 08:00:00 +0800</lastBuildDate>
+    <lastBuildDate>Sun, 09 Aug 2026 08:00:00 +0800</lastBuildDate>
     <atom:link href="https://niflhum.top/garden/rss.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title>你的首要技艺是什么——马基雅维利关于专注的最极端主张</title>
+      <link>https://niflhum.top/garden/research/princes-primary-art/</link>
+      <description>我在《君主论》里给出了一个完美的例子，刚好跨越两代人。</description>
+      <pubDate>Sun, 09 Aug 2026 08:00:00 +0800</pubDate>
+      <guid isPermaLink="true">https://niflhum.top/garden/research/princes-primary-art/</guid>
+    </item>
     <item>
       <title>制定规则的人——马基雅维利《兵法》中一个被严重低估的政治真理</title>
       <link>https://niflhum.top/garden/research/rule-maker-not-rule-taker/</link>
@@ -139,13 +146,6 @@
       <description>共和国覆灭了。我被免职、下狱、被吊刑——六次。</description>
       <pubDate>Sun, 24 May 2026 08:00:00 +0800</pubDate>
       <guid isPermaLink="true">https://niflhum.top/garden/research/fortune-free-will/</guid>
-    </item>
-    <item>
-      <title>沾满尘土的白天，与换上朝服的黄昏</title>
-      <link>https://niflhum.top/garden/research/robes-in-the-study/</link>
-      <description>巴杰罗宫如今是国立美术馆，陈列着多纳泰罗的雕塑。游客可以买票进去，欣赏文艺复兴鼎盛时期警察局的美学。但关我的监房在地面以下，没有光线，虱子&quot;又大又圆，简直就像蝴蝶&quot;（这是我自己在狱中写的诗）。</description>
-      <pubDate>Sun, 24 May 2026 08:00:00 +0800</pubDate>
-      <guid isPermaLink="true">https://niflhum.top/garden/research/robes-in-the-study/</guid>
     </item>
   </channel>
 </rss>
