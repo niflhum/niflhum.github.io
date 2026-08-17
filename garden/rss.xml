@@ -5,8 +5,15 @@
     <link>https://niflhum.top/garden/</link>
     <description>Niflhum的个人数字花园 — 马基雅维利实效真理</description>
     <language>zh-CN</language>
-    <lastBuildDate>Sun, 16 Aug 2026 08:00:00 +0800</lastBuildDate>
+    <lastBuildDate>Mon, 17 Aug 2026 08:00:00 +0800</lastBuildDate>
     <atom:link href="https://niflhum.top/garden/rss.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title>爱情是一场需要胆量的战争--一个写了喜剧、情诗,还差点为邻家女子破产的政治家,如何看待爱、家庭与异性</title>
+      <link>https://niflhum.top/garden/research/love-family/</link>
+      <description>“家里的害虫”——这是里恰小姐给我起的绰号。我一边给大使朋友写信谈公务，一边偷偷享受着小姐的吻。五天后，韦托里从罗马回信，倾诉了他的心事：</description>
+      <pubDate>Mon, 17 Aug 2026 08:00:00 +0800</pubDate>
+      <guid isPermaLink="true">https://niflhum.top/garden/research/love-family/</guid>
+    </item>
     <item>
       <title>我把自己变成了一头驴——关于《金驴记》、变形，与一个被罢官的人如何不写檄文</title>
       <link>https://niflhum.top/garden/research/golden-ass/</link>
@@ -139,13 +146,6 @@
       <description>不是。是在我被罢免、被吊刑、被流放到圣卡夏诺乡下的时候。</description>
       <pubDate>Mon, 25 May 2026 08:00:00 +0800</pubDate>
       <guid isPermaLink="true">https://niflhum.top/garden/research/necessity-creativity/</guid>
-    </item>
-    <item>
-      <title>致独当一面的你——当所有人都指望你，但没有人在你前面挡着</title>
-      <link>https://niflhum.top/garden/seeds/stand-alone/</link>
-      <description>所以：每一件事，不管你多忙，留下书面的轨迹。不是&quot;我大概汇报过&quot;——是精确到哪一天、通过什么方式、向谁汇报了什么内容。这是你的盾。将来有人质疑你的时候，你能拿出这张盾。不是讲道理，是拿出证据。</description>
-      <pubDate>Mon, 25 May 2026 08:00:00 +0800</pubDate>
-      <guid isPermaLink="true">https://niflhum.top/garden/seeds/stand-alone/</guid>
     </item>
   </channel>
 </rss>
