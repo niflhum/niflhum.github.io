@@ -3,34 +3,21 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Niflhum 的项目 — 马基雅维利原文图书馆、AI 数字分身 skill、OCR 工具等">
 <title>项目 — Niflhum</title>
+<!-- Open Graph -->
+<meta property="og:title" content="项目 — Niflhum">
+<meta property="og:description" content="Niflhum 的项目 — 马基雅维利原文图书馆、AI 数字分身 skill、OCR 工具等">
+<meta property="og:url" content="https://niflhum.top/projects/">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Niflhum">
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="项目 — Niflhum">
+<meta name="twitter:description" content="Niflhum 的项目 — 马基雅维利原文图书馆、AI 数字分身 skill、OCR 工具等">
 <meta name="theme-color" content="#1a1410">
+<link href="/assets/common.css" rel="stylesheet">
 <style>
-  :root {
-    --bg: #1a1410; --card: #231e18; --card-hover: #2a2418;
-    --text: #c4b99a; --heading: #d9ceb5; --muted: #7a6e5d;
-    --accent: #8b3a3a; --border: #3a3028; --divider: #2a241c;
-    --tag-bg: #2a2018;
-  }
-  * { margin:0; padding:0; box-sizing:border-box; }
-  body {
-    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Microsoft YaHei",sans-serif;
-    background:var(--bg); color:var(--text); min-height:100vh;
-    display:flex; flex-direction:column; align-items:center; padding:0; line-height:1.7;
-  }
-
-  /* Global Nav */
-  .site-nav {
-    width:100%; max-width:760px; padding:1.2rem 2rem;
-    display:flex; align-items:center; gap:1.5rem; font-size:0.82rem;
-  }
-  .site-nav .brand { font-family:Georgia,"Noto Serif SC",serif; color:var(--heading); text-decoration:none; font-size:0.95rem; letter-spacing:-0.3px }
-  .site-nav .brand:hover { color:var(--accent) }
-  .site-nav .sep { color:var(--border); margin:0 -0.3rem }
-  .site-nav a { color:var(--muted); text-decoration:none; transition:color 0.2s }
-  .site-nav a:hover { color:var(--heading) }
-  .site-nav a.current { color:var(--text); font-weight:500 }
-
   .page { max-width:680px; width:100%; padding:2.5rem 2rem 3rem }
   h1 {
     font-family:Georgia,"Noto Serif SC",serif;
@@ -79,7 +66,6 @@
 
   @media(max-width:600px){
     .page { padding:1.5rem 1rem 2rem }
-    .site-nav { padding:1rem; gap:0.8rem; flex-wrap:wrap }
     .project-grid { grid-template-columns:1fr }
     h1 { font-size:1.6rem }
   }
@@ -130,6 +116,12 @@
 
 <script>
   const CURATED = ['machiavelli-library','machiavelli-skill','gwsw','niflhum.github.io'];
+  // XSS 防护：外部数据注入 innerHTML 前必须经 esc() 转义（OWASP XSS Prevention）
+  function esc(s) {
+    return String(s ?? '').replace(/[&<>"']/g, c => ({
+      '&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'
+    })[c]);
+  }
   fetch('/garden/github-activity.json')
     .then(r => r.json())
     .then(data => {
@@ -137,11 +129,11 @@
       const others = data.repos.filter(r => !CURATED.includes(r.name));
       if (!others.length) return;
       document.getElementById('gh-dynamic').innerHTML = others.map(r =>
-        `<a href="${r.url}" class="gh-repo" target="_blank">
-          <span class="name">${r.name}</span>
-          ${r.language ? '<span class="lang-tag">'+r.language+'</span>' : ''}
-          ${r.stars ? ' <span style="color:var(--muted);font-size:0.7rem">★'+r.stars+'</span>' : ''}
-          <div class="desc">${r.description||''}</div>
+        `<a href="${esc(r.url)}" class="gh-repo" target="_blank">
+          <span class="name">${esc(r.name)}</span>
+          ${r.language ? '<span class="lang-tag">'+esc(r.language)+'</span>' : ''}
+          ${r.stars ? ' <span style="color:var(--muted);font-size:0.7rem">★'+esc(r.stars)+'</span>' : ''}
+          <div class="desc">${esc(r.description||'')}</div>
         </a>`).join('');
     }).catch(()=>{});
 </script>
