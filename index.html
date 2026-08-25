@@ -129,6 +129,9 @@
       font-size:0.8rem; text-align:center; width:100%;
     }
     footer .motto { font-family:Georgia,serif; font-style:italic; margin-bottom:0.3rem }
+    /* 不蒜子浏览量统计（页脚展示，加载失败不影响页面其余部分） */
+    footer .stats { margin-top:0.6rem; font-size:0.72rem; color:var(--muted) }
+    footer .stats span { color:var(--heading) }
 
     @media (max-width:600px) {
       .container { padding:2rem 1rem 1.5rem }
@@ -204,7 +207,11 @@
   <footer>
     <p class="motto">Mi spoglio della veste quotidiana, piena di fango e di loto.</p>
     <p>脱下沾满尘土的衣服，换上朝服，跨入古人的殿堂。</p>
+    <p class="stats">本站总访问量 <span id="busuanzi_value_site_pv"></span> 次 · 访客 <span id="busuanzi_value_site_uv"></span> 人</p>
   </footer>
+
+  <!-- 不蒜子浏览量统计（async 加载，服务不可用时静默失效，不影响页面） -->
+  <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
 
   <script>
     // XSS 防护：外部数据注入 innerHTML 前必须经 esc() 转义（OWASP XSS Prevention）

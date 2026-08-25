@@ -63,6 +63,9 @@
   footer { margin-top:auto; padding:2rem; color:var(--muted); font-size:0.8rem; text-align:center; width:100% }
   footer a { color:var(--muted); text-decoration:none }
   footer a:hover { color:var(--accent) }
+  /* 不蒜子浏览量统计（页脚展示，加载失败不影响页面其余部分） */
+  footer .stats { margin-top:0.6rem; font-size:0.72rem }
+  footer .stats span { color:var(--heading) }
 
   @media(max-width:600px){
     .page { padding:1.5rem 1rem 2rem }
@@ -117,7 +120,13 @@
   <div id="gh-dynamic"></div>
 </div>
 
-<footer><a href="https://github.com/niflhum">GitHub 全部仓库 →</a></footer>
+<footer>
+  <a href="https://github.com/niflhum">GitHub 全部仓库 →</a>
+  <p class="stats">本站总访问量 <span id="busuanzi_value_site_pv"></span> 次 · 访客 <span id="busuanzi_value_site_uv"></span> 人</p>
+</footer>
+
+<!-- 不蒜子浏览量统计（async 加载，服务不可用时静默失效，不影响页面） -->
+<script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
 
 <script>
   const CURATED = ['machiavelli-library','machiavelli-skill','gwsw','niflhum.github.io'];
