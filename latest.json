@@ -1,23 +1,26 @@
 [
   {
-    "title": "让你的文字像当面说话——关于写作，我唯一确定的规则",
-    "url": "garden/research/write-as-if-speaking/",
+    "title": "一个共产主义者读哈耶克：清醒的敌人，迷狂的信徒",
+    "url": "garden/seeds/road-to-serfdom/",
     "date": "2026-08-23",
-    "slug": "write-as-if-speaking",
-    "desc": "*来自佛罗伦萨的一封信*"
+    "mtime": 1787480270.6382937,
+    "slug": "road-to-serfdom",
+    "desc": "读完《通往奴役之路》，先下个定语：**清醒的敌人，迷狂的信徒。**"
   },
   {
     "title": "三张票，一个空座：当「我的权利」遇上「你的方便」——高铁占座风波里的秩序之辩",
     "url": "garden/seeds/seat-dispute/",
     "date": "2026-08-23",
+    "mtime": 1787477322.111511,
     "slug": "seat-dispute",
     "desc": "听说你们国家最近因为一件小事吵翻了天：两个女孩买了三张高铁票，一张坐人，两张放零食；无座乘客想坐，被…"
   },
   {
-    "title": "一个共产主义者读哈耶克：清醒的敌人，迷狂的信徒",
-    "url": "garden/seeds/road-to-serfdom/",
+    "title": "让你的文字像当面说话——关于写作，我唯一确定的规则",
+    "url": "garden/research/write-as-if-speaking/",
     "date": "2026-08-23",
-    "slug": "road-to-serfdom",
-    "desc": "读完《通往奴役之路》，先下个定语：**清醒的敌人，迷狂的信徒。**"
+    "mtime": 1787476264.3084946,
+    "slug": "write-as-if-speaking",
+    "desc": "*来自佛罗伦萨的一封信*"
   }
 ]
