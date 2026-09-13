@@ -5,8 +5,15 @@
     <link>https://niflhum.top/garden/</link>
     <description>Niflhum的个人数字花园 — 马基雅维利实效真理</description>
     <language>zh-CN</language>
-    <lastBuildDate>Sun, 23 Aug 2026 12:00:00 +0800</lastBuildDate>
+    <lastBuildDate>Sun, 13 Sep 2026 12:00:00 +0800</lastBuildDate>
     <atom:link href="https://niflhum.top/garden/rss.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title>拿着粉笔就夺取了意大利——关于雇佣军、国民军，和一个亲手组建过军队的人的教训</title>
+      <link>https://niflhum.top/garden/research/own-army-and-mercenaries/</link>
+      <description>亲爱的朋友，如果你允许我从一桩我自己的失败说起——</description>
+      <pubDate>Sun, 13 Sep 2026 12:00:00 +0800</pubDate>
+      <guid isPermaLink="true">https://niflhum.top/garden/research/own-army-and-mercenaries/</guid>
+    </item>
     <item>
       <title>一个共产主义者读哈耶克：清醒的敌人，迷狂的信徒</title>
       <link>https://niflhum.top/garden/seeds/road-to-serfdom/</link>
@@ -139,13 +146,6 @@
       <description>为什么一个人在一个时期能够无往不利，换了个时期却一败涂地——而他本人没有任何变化？</description>
       <pubDate>Sun, 31 May 2026 12:00:00 +0800</pubDate>
       <guid isPermaLink="true">https://niflhum.top/garden/research/virtu-fortuna-necessita/</guid>
-    </item>
-    <item>
-      <title>致刚走上领导岗位的年轻人·再及——喀戎、地狱与一封补充的信</title>
-      <link>https://niflhum.top/garden/seeds/young-leader-part2/</link>
-      <description>上一封信我告诉你要建立结构——要求明确、奖惩分明。这没错。但如果你只做到这些，你会变成一个让下属表面上执行、背地里诅咒的人。结构是骨架。你需要的是在骨架上的活人肌肉。</description>
-      <pubDate>Fri, 29 May 2026 12:00:00 +0800</pubDate>
-      <guid isPermaLink="true">https://niflhum.top/garden/seeds/young-leader-part2/</guid>
     </item>
   </channel>
 </rss>
