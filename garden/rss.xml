@@ -5,8 +5,15 @@
     <link>https://niflhum.top/garden/</link>
     <description>Niflhum的个人数字花园 — 马基雅维利实效真理</description>
     <language>zh-CN</language>
-    <lastBuildDate>Sun, 13 Sep 2026 12:00:00 +0800</lastBuildDate>
+    <lastBuildDate>Sun, 27 Sep 2026 12:00:00 +0800</lastBuildDate>
     <atom:link href="https://niflhum.top/garden/rss.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title>当国务秘书拿起诗琴——关于《十年纪》，我写给意大利的挽歌</title>
+      <link>https://niflhum.top/garden/research/decennale-poet/</link>
+      <description>人们记住我，多半是因为一本讲君主的薄册子。可我最早拿去印行、正正经经题了献辞的作品，却是一部长诗。1504 年的深秋，我把《十年纪》的第一部题献给阿拉曼诺·萨尔维亚蒂——一位起初扶持过我、后来又与我渐行渐远的佛罗伦萨政治家。</description>
+      <pubDate>Sun, 27 Sep 2026 12:00:00 +0800</pubDate>
+      <guid isPermaLink="true">https://niflhum.top/garden/research/decennale-poet/</guid>
+    </item>
     <item>
       <title>拿着粉笔就夺取了意大利——关于雇佣军、国民军，和一个亲手组建过军队的人的教训</title>
       <link>https://niflhum.top/garden/research/own-army-and-mercenaries/</link>
@@ -139,13 +146,6 @@
       <description>有人对我说：尼科洛，你赞美罗马，可是那个共和国难道不是被无休止的内乱撕裂了吗？平民和元老院争吵了三百年——店铺关门，百姓弃城，暴民啸聚街头。这样的共和国，有什么好羡慕的？</description>
       <pubDate>Tue, 02 Jun 2026 12:00:00 +0800</pubDate>
       <guid isPermaLink="true">https://niflhum.top/garden/research/conflict-engine/</guid>
-    </item>
-    <item>
-      <title>你失败的原因不是能力不足，而是与时势错位——virtù × fortuna × necessità 三角</title>
-      <link>https://niflhum.top/garden/research/virtu-fortuna-necessita/</link>
-      <description>为什么一个人在一个时期能够无往不利，换了个时期却一败涂地——而他本人没有任何变化？</description>
-      <pubDate>Sun, 31 May 2026 12:00:00 +0800</pubDate>
-      <guid isPermaLink="true">https://niflhum.top/garden/research/virtu-fortuna-necessita/</guid>
     </item>
   </channel>
 </rss>
