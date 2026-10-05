@@ -5,8 +5,15 @@
     <link>https://niflhum.top/garden/</link>
     <description>Niflhum的个人数字花园 — 马基雅维利实效真理</description>
     <language>zh-CN</language>
-    <lastBuildDate>Sun, 27 Sep 2026 12:00:00 +0800</lastBuildDate>
+    <lastBuildDate>Mon, 05 Oct 2026 12:00:00 +0800</lastBuildDate>
     <atom:link href="https://niflhum.top/garden/rss.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title>我为何为一个僭主写传记——关于卡斯特鲁乔，一部</title>
+      <link>https://niflhum.top/garden/research/castruccio-castracani/</link>
+      <description>我写过急件、史书、喜剧和长诗，但真正算得上&quot;传记&quot;的，只有一部。1520 年，我访问卢卡期间写下了《卢卡人卡斯特鲁乔·卡斯特拉卡尼的生平》，把它题献给扎诺比·布昂德尔蒙蒂和路易吉·阿拉曼尼——奥里切拉里花园里那两个愿意凭才气行动的朋友。</description>
+      <pubDate>Mon, 05 Oct 2026 12:00:00 +0800</pubDate>
+      <guid isPermaLink="true">https://niflhum.top/garden/research/castruccio-castracani/</guid>
+    </item>
     <item>
       <title>当国务秘书拿起诗琴——关于《十年纪》，我写给意大利的挽歌</title>
       <link>https://niflhum.top/garden/research/decennale-poet/</link>
@@ -139,13 +146,6 @@
       <description>有人问我：尼科洛，你半辈子都在出使——法国、德意志、罗马涅、乌尔比诺——你觉得旅行教会了你什么？</description>
       <pubDate>Fri, 05 Jun 2026 12:00:00 +0800</pubDate>
       <guid isPermaLink="true">https://niflhum.top/garden/research/travel-diplomacy/</guid>
-    </item>
-    <item>
-      <title>为什么共和国需要内讧——一个让全体统治者不舒服的真相</title>
-      <link>https://niflhum.top/garden/research/conflict-engine/</link>
-      <description>有人对我说：尼科洛，你赞美罗马，可是那个共和国难道不是被无休止的内乱撕裂了吗？平民和元老院争吵了三百年——店铺关门，百姓弃城，暴民啸聚街头。这样的共和国，有什么好羡慕的？</description>
-      <pubDate>Tue, 02 Jun 2026 12:00:00 +0800</pubDate>
-      <guid isPermaLink="true">https://niflhum.top/garden/research/conflict-engine/</guid>
     </item>
   </channel>
 </rss>
