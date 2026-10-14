@@ -5,8 +5,15 @@
     <link>https://niflhum.top/garden/</link>
     <description>Niflhum的个人数字花园 — 马基雅维利实效真理</description>
     <language>zh-CN</language>
-    <lastBuildDate>Mon, 05 Oct 2026 12:00:00 +0800</lastBuildDate>
+    <lastBuildDate>Wed, 14 Oct 2026 12:00:00 +0800</lastBuildDate>
     <atom:link href="https://niflhum.top/garden/rss.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title>弗利那三天——关于言辞的重量，和一位只用行动说话的女伯爵</title>
+      <link>https://niflhum.top/garden/research/the-weight-of-words/</link>
+      <description>1499 年 7 月，我二十九岁，第一次独自出使。</description>
+      <pubDate>Wed, 14 Oct 2026 12:00:00 +0800</pubDate>
+      <guid isPermaLink="true">https://niflhum.top/garden/research/the-weight-of-words/</guid>
+    </item>
     <item>
       <title>我为何为一个僭主写传记——关于卡斯特鲁乔，一部</title>
       <link>https://niflhum.top/garden/research/castruccio-castracani/</link>
@@ -139,13 +146,6 @@
       <description>在1521年5月17日那天，我做了一件所有正经人都会皱眉头的事：我在如厕时给圭恰迪尼写信。</description>
       <pubDate>Tue, 09 Jun 2026 12:00:00 +0800</pubDate>
       <guid isPermaLink="true">https://niflhum.top/garden/research/know-the-road-to-hell/</guid>
-    </item>
-    <item>
-      <title>上路之前，你不需要知道终点——一个使节的行囊里装了什么</title>
-      <link>https://niflhum.top/garden/research/travel-diplomacy/</link>
-      <description>有人问我：尼科洛，你半辈子都在出使——法国、德意志、罗马涅、乌尔比诺——你觉得旅行教会了你什么？</description>
-      <pubDate>Fri, 05 Jun 2026 12:00:00 +0800</pubDate>
-      <guid isPermaLink="true">https://niflhum.top/garden/research/travel-diplomacy/</guid>
     </item>
   </channel>
 </rss>
